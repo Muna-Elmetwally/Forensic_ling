@@ -1,13 +1,13 @@
-function App() {
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Logo from "./components/Logo";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          Forensic Linguistics: The Middle East Government Journal on Language
-          and Law
-        </h1>
-      </header>
+    <div>
+      <Header />
+      <Logo />
+      <Footer />
     </div>
   );
 }
-export default App;
