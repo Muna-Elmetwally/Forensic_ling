@@ -1,3 +1,108 @@
+/*global css*/
+/*global html*/
+* {
+  height: "100vh";
+  align-items: "center";
+  justify-content: "center";
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: sans-serif, "cairo";
+}
+
+/* Styling for the parent container */
+.signup-parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #334155,
+    #1e293b
+  ); /* Darker, professional tones */
+  font-family: "Times New Roman", serif; /* Formal font */
+}
+
+/* Styling for the register form container */
+.register {
+  background: #f8fafc; /* Light background for contrast */
+  padding: 5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* General input styling */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1; /* Light gray border */
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #e2e8f0; /* Subtle background */
+  transition: border 0.3s ease;
+}
+
+/* On focus input styling */
+input:focus {
+  border: 1px solid #0f172a; /* Darker focus border */
+  outline: none;
+  background: #fff;
+}
+
+/* Styling for form labels */
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin: 10px 0 5px;
+  color: #1e293b; /* Dark gray for text */
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Button styling */
+#button {
+  background-color: #0f172a; /* Dark blue */
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+/* Hover effect for button */
+#button:hover {
+  background-color: #334155;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register {
+    padding: 1rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
 }
