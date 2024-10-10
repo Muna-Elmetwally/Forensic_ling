@@ -1,5 +1,6 @@
 import { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
+
 export default function SignUp() {
   const [first_name, setFirst_name] = useState("");
   const [last_name, setLast_name] = useState("");
@@ -10,16 +11,18 @@ export default function SignUp() {
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
   const [career, setCareer] = useState("");
-  const [accept, setAccept] = useState(false);
-  const [flag, setFlag] = useState(false); //sending APIS
+  const [accept, setAccept] = useState(false); // For error message rendering
+  const [flag, setFlag] = useState(false); // Sending APIs
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state for API call
 
   console.log(flag);
 
   function submit(e) {
     e.preventDefault();
-    setAccept(true); //for rendering the error messages
-    // Validate inputs
+    setAccept(true); // To trigger validation error messages
+
+    // Input validation
     if (
       username.length < 3 ||
       email === "" ||
@@ -27,24 +30,46 @@ export default function SignUp() {
       passwordR !== password
     ) {
       setFlag(false);
-      return; // Exit early if validation fails
+      return; // Exit if validation fails
     }
 
-    // Set flag to true if inputs are valid
+    // If inputs are valid, set the flag to true
     setFlag(true);
-    // For now, we'll just show a success message
-    setMessage("Form submitted successfully!");
-    // Reset form fields
-    setFirst_name("");
-    setLast_name("");
-    setUser_name("");
-    setEmail("");
-    setPassword("");
-    setRepeat_password("");
-    setPhone("");
-    setCountry("");
-    setCareer("");
-    setAccept(false);
+    setLoading(true); // Set loading state while making API call
+
+    // Mock API request using axios
+    axios
+      .post("https://jsonplaceholder.typicode.com/posts", {
+        first_name,
+        last_name,
+        username,
+        email,
+        password,
+        phone,
+        country,
+        career,
+      })
+      .then((response) => {
+        console.log("Mock API response:", response.data);
+        setMessage("Form submitted successfully!"); // Success message
+        setLoading(false); // Stop loading
+        // Reset form fields
+        setFirst_name("");
+        setLast_name("");
+        setUser_name("");
+        setEmail("");
+        setPassword("");
+        setRepeat_password("");
+        setPhone("");
+        setCountry("");
+        setCareer("");
+        setAccept(false);
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+        setMessage("There was an error submitting the form.");
+        setLoading(false); // Stop loading
+      });
   }
 
   return (
@@ -58,11 +83,11 @@ export default function SignUp() {
             placeholder="First Name"
             value={first_name}
             onChange={(e) => setFirst_name(e.target.value)}
-            autoComplete="given-name" // Added autocomplete
+            autoComplete="given-name"
           />
           <label htmlFor="last_name">Last Name</label>
           <input
-            id="last"
+            id="last_name"
             type="text"
             placeholder="Last Name"
             value={last_name}
@@ -84,19 +109,18 @@ export default function SignUp() {
             id="email"
             type="email"
             placeholder="Email"
-            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            autoComplete="email" // Added autocomplete
+            autoComplete="email"
           />
           <label htmlFor="password">Password</label>
           <input
-            id="pass"
+            id="password"
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            autoComplete="new-password" // Added autocomplete
+            autoComplete="new-password"
           />
           {password.length < 8 && accept && (
             <p className="error">Password must be at least 8 characters</p>
@@ -106,11 +130,9 @@ export default function SignUp() {
             id="passwordR"
             type="password"
             placeholder="Repeat your Password"
-            value={passwordR} /* Use the state variable here */
-            onChange={(e) =>
-              setRepeat_password(e.target.value)
-            } /* Update the state on input change */
-            autoComplete="new-password" // Added autocomplete
+            value={passwordR}
+            onChange={(e) => setRepeat_password(e.target.value)}
+            autoComplete="new-password"
           />
           {passwordR !== password && accept && (
             <p className="error">Passwords do not match</p>
@@ -122,7 +144,7 @@ export default function SignUp() {
             placeholder="Phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            autoComplete="tel" // Added autocomplete
+            autoComplete="tel"
           />
           <label htmlFor="country">Country</label>
           <input
@@ -131,22 +153,23 @@ export default function SignUp() {
             placeholder="Country"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
-            autoComplete="country-name" // Added autocomplete
+            autoComplete="country-name"
           />
-          <label htmlFor="career">job</label>
+          <label htmlFor="career">Career</label>
           <input
             id="career"
             type="text"
-            placeholder="What do you do for living?"
+            placeholder="What do you do for a living?"
             value={career}
             onChange={(e) => setCareer(e.target.value)}
-            autoComplete="job-title" // Added autocomplete
+            autoComplete="job-title"
           />
           <div className="button" style={{ textAlign: "center" }}>
-            <button id="button">Sign Up</button>
+            <button id="button" type="submit">
+              {loading ? "Submitting..." : "Sign Up"}
+            </button>
           </div>
-          {message && <p className="message">{message}</p>}{" "}
-          {/* Displaying success/error messages */}
+          {message && <p className="message">{message}</p>}
         </form>
       </div>
     </div>
