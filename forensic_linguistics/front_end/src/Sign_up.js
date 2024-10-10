@@ -100,6 +100,7 @@ export default function SignUp() {
             placeholder="Username"
             value={username}
             onChange={(e) => setUser_name(e.target.value)}
+            required
           />
           {username.length < 3 && accept && (
             <p className="error">Username must be at least 3 characters</p>
@@ -112,6 +113,7 @@ export default function SignUp() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="email"
+            required
           />
           <label htmlFor="password">Password</label>
           <input
@@ -121,6 +123,7 @@ export default function SignUp() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             autoComplete="new-password"
+            required
           />
           {password.length < 8 && accept && (
             <p className="error">Password must be at least 8 characters</p>
