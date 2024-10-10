@@ -1,16 +1,15 @@
 import { useState } from "react";
 // import axios from "axios";
 export default function Sign_up() {
-  //   const [first_name, setFirst_name] = useState("");
-  //   const [last_name, setLast_name] = useState("");
-  //     const [username, setUser_name] = useState("");
-  const [name, setName] = useState("");
+  const [first_name, setFirst_name] = useState("");
+  const [last_name, setLast_name] = useState("");
+  const [username, setUser_name] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordR, setRepeat_password] = useState("");
-  //   const [phone, setPhone] = useState("");
-  //   const [country, setCountry] = useState("");
-  //   const [career, setCareer] = useState("");
+  const [phone, setPhone] = useState("");
+  const [country, setCountry] = useState("");
+  const [career, setCareer] = useState("");
   const [accept, setAccept] = useState(false);
   const [flag, setFlag] = useState(false); //sending APIS
   const [message, setMessage] = useState("");
@@ -22,7 +21,7 @@ export default function Sign_up() {
     setAccept(true); //for rendering the error messages
     // Validate inputs
     if (
-      name.length < 3 ||
+      username.length < 3 ||
       email === "" ||
       password.length < 8 ||
       passwordR !== password
@@ -36,10 +35,16 @@ export default function Sign_up() {
     // For now, we'll just show a success message
     setMessage("Form submitted successfully!");
     // Reset form fields
-    setName("");
+    setFirst_name("");
+    setLast_name("");
+    setUser_name("");
     setEmail("");
     setPassword("");
     setRepeat_password("");
+    setPhone("");
+    setCountry("");
+    setCareer("");
+
     setAccept(false);
   }
 
@@ -47,17 +52,34 @@ export default function Sign_up() {
     <div className="signup-parent">
       <div className="register">
         <form onSubmit={submit} style={{ textAlign: "center" }}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="first_name">First Name</label>
           <input
-            id="name"
+            id="first_name"
             type="text"
-            placeholder="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="First Name"
+            value={first_name}
+            onChange={(e) => setFirst_name(e.target.value)}
+            autoComplete="given-name" // Added autocomplete
+          />
+          <label htmlFor="last_name">Last Name</label>
+          <input
+            id="last"
+            type="text"
+            placeholder="Last Name"
+            value={last_name}
+            onChange={(e) => setLast_name(e.target.value)}
+          />
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUser_name(e.target.value)}
             autoComplete="family-name" // Added autocomplete
           />
-          {name === "" && accept && (
-            <p className="error">name must be at least 3 characters</p>
+          {username === "" && accept && (
+            <p className="error">Username must be at least 3 characters</p>
           )}
           <label htmlFor="email">Email</label>
           <input
@@ -95,6 +117,34 @@ export default function Sign_up() {
           {passwordR !== password && accept && (
             <p className="error">Passwords do not match</p>
           )}
+          <label htmlFor="phone">Phone</label>
+          <input
+            id="phone"
+            type="tel"
+            placeholder="Phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            autoComplete="tel" // Added autocomplete
+          />
+          <label htmlFor="country">Country</label>
+          <input
+            id="country"
+            type="text"
+            placeholder="Country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            autoComplete="country-name" // Added autocomplete
+          />
+          <label htmlFor="career">job</label>
+          <input
+            id="career"
+            type="text"
+            placeholder="What do you do for living?"
+            value={career}
+            onChange={(e) => setCareer(e.target.value)}
+            autoComplete="job-title" // Added autocomplete
+          />
+          *
           <div className="button" style={{ textAlign: "center" }}>
             <button id="button">Sign Up</button>
           </div>
