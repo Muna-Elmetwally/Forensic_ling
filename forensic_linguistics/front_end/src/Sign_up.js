@@ -144,7 +144,6 @@ export default function Sign_up() {
             onChange={(e) => setCareer(e.target.value)}
             autoComplete="job-title" // Added autocomplete
           />
-          *
           <div className="button" style={{ textAlign: "center" }}>
             <button id="button">Sign Up</button>
           </div>

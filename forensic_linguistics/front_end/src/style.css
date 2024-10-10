@@ -1,25 +1,26 @@
-/*global css*/
-/*global html*/
+/* Global Styles */
 * {
-  height: "100vh";
-  align-items: "center";
-  justify-content: "center";
+  box-sizing: border-box; /* Ensure padding and borders are included in total width/height */
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default padding */
 }
+
 html,
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
 }
 
+/* Body Styles */
 body {
-  font-family: sans-serif, "cairo";
+  font-family: "Cairo", sans-serif; /* Ensure font loads properly */
+  display: flex; /* Enable flexbox layout for body */
+  flex-direction: column; /* Stack header, main, and footer vertically */
 }
 
-/* Styling for the parent container */
+/* Parent Container Styling */
 .signup-parent {
-  height: 100vh;
+  flex: 1; /* Take up remaining space between header and footer */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +29,12 @@ body {
     #334155,
     #1e293b
   ); /* Darker, professional tones */
-  font-family: "Times New Roman", serif; /* Formal font */
 }
 
-/* Styling for the register form container */
+/* Register Form Container Styling */
 .register {
   background: #f8fafc; /* Light background for contrast */
-  padding: 5rem;
+  padding: 2rem; /* Reduced padding for smaller devices */
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
   max-width: 400px;
@@ -42,7 +42,7 @@ body {
   text-align: center;
 }
 
-/* General input styling */
+/* General Input Styling */
 input {
   width: 100%;
   padding: 12px 15px;
@@ -54,14 +54,14 @@ input {
   transition: border 0.3s ease;
 }
 
-/* On focus input styling */
+/* Input Focus Styling */
 input:focus {
   border: 1px solid #0f172a; /* Darker focus border */
   outline: none;
   background: #fff;
 }
 
-/* Styling for form labels */
+/* Form Labels */
 label {
   display: block;
   font-size: 0.95rem;
@@ -71,7 +71,7 @@ label {
   text-align: left;
 }
 
-/* Button styling */
+/* Button Styling */
 #button {
   background-color: #0f172a; /* Dark blue */
   color: white;
@@ -85,28 +85,29 @@ label {
   width: 100%;
 }
 
-/* Hover effect for button */
+/* Button Hover Effect */
 #button:hover {
   background-color: #334155;
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .register {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Increased padding for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .register {
-    padding: 1rem;
+    padding: 1rem; /* Reduced padding for extra small screens */
   }
 
   input {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Smaller font size for inputs */
   }
 }
-/*error*/
+
+/* Error Message Styling */
 .error {
   color: red;
   font-size: 0.9rem;
