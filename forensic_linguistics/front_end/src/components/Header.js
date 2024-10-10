@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className="Header">
@@ -10,8 +11,12 @@ export default function Header() {
           </ul>
         </div>
         <div className="d-flex">
-          <div className="signup_nav">Sign Up</div>
-          <div className="login_nav">Log In</div>
+          <Link to="/Signup" className="signup_nav">
+            Sign Up
+          </Link>
+          <Link to="/log-in" className="login_nav">
+            Log In
+          </Link>
         </div>
       </header>
       <div>

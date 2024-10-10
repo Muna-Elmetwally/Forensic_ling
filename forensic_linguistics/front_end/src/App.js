@@ -1,6 +1,7 @@
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Logo from "./components/Logo";
-import Signup from "./Sign_up";
+import SignUp from "./Sign_up";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -9,7 +10,9 @@ export default function App() {
       <div>
         <Header />
         <Logo />
-        <Signup />
+        <Routes>
+          <Route path="/Signup" element={<SignUp />} />
+        </Routes>
       </div>
       <div>
         <Footer />
