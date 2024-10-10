@@ -6,10 +6,14 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <div>
-      <Header />
-      <Logo />
-      <Signup />
-      <Footer />
+      <div>
+        <Header />
+        <Logo />
+        <Signup />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
