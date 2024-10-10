@@ -71,6 +71,9 @@ export default function Sign_up() {
               setRepeat_password(e.target.value)
             } /* Update the state on input change */
           />
+          {repeat_password !== password && accept && (
+            <p>Passwords do not match</p>
+          )}
           <label htmlfor="phone">Phone</label>
           <input
             id="phone"
