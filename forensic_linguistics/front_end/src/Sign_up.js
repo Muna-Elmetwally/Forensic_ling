@@ -2,6 +2,8 @@ import { useState } from "react";
 export default function Sign_up() {
   const [first_name, setFirst_name] = useState("");
   const [last_name, setLast_name] = useState("");
+  const [username, setUser_name] = useState("");
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeat_password, setRepeat_password] = useState("");
@@ -41,6 +43,17 @@ export default function Sign_up() {
             value={last_name}
             onChange={(e) => setLast_name(e.target.value)}
           />
+          <label htmlfor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUser_name(e.target.value)}
+          />
+          {username === "" && accept && (
+            <p className="error">Username must be at least 3 characters</p>
+          )}
           <label htmlfor="email">Email</label>
           <input
             id="email"
@@ -59,7 +72,7 @@ export default function Sign_up() {
             onChange={(e) => setPassword(e.target.value)}
           />
           {password.length < 8 && accept && (
-            <p>Password must be at least 8 characters</p>
+            <p className="error">Password must be at least 8 characters</p>
           )}
           <label htmlFor="repeat_password">Repeat Password</label>
           <input
@@ -72,7 +85,7 @@ export default function Sign_up() {
             } /* Update the state on input change */
           />
           {repeat_password !== password && accept && (
-            <p>Passwords do not match</p>
+            <p className="error">Passwords do not match</p>
           )}
           <label htmlfor="phone">Phone</label>
           <input
