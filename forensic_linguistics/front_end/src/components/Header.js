@@ -13,7 +13,7 @@ export default function Header() {
         <nav className="d-flex">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/Home">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -38,12 +38,6 @@ export default function Header() {
           </div>
         )}
       </header>
-      <div>
-        <h1>
-          Forensic Linguistics: The Middle East Government Journal on Language
-          and Law
-        </h1>
-      </div>
     </div>
   );
 }
