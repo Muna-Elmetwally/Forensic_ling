@@ -44,7 +44,6 @@ export default function Sign_up() {
     setPhone("");
     setCountry("");
     setCareer("");
-
     setAccept(false);
   }
 
@@ -76,9 +75,8 @@ export default function Sign_up() {
             placeholder="Username"
             value={username}
             onChange={(e) => setUser_name(e.target.value)}
-            autoComplete="family-name" // Added autocomplete
           />
-          {username === "" && accept && (
+          {username.length < 3 && accept && (
             <p className="error">Username must be at least 3 characters</p>
           )}
           <label htmlFor="email">Email</label>
