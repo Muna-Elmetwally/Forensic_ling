@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export default function SignUp() {
     e.preventDefault();
     setAccept(true);
 
-    // Input validation
+    // Input Validation checks
     if (
       username.length < 3 ||
       email === "" ||
@@ -33,18 +33,17 @@ export default function SignUp() {
     }
 
     setLoading(true);
-
-    // Mock API request to check if the email already exists
+    // Mock API request for registration
     axios
       .post("https://jsonplaceholder.typicode.com/posts", { email })
       .then((response) => {
+        // Mock check for existing email
         if (response.data.email === email) {
           setMessage("An account with this email already exists.");
           setLoading(false);
           return; // Exit the function
         }
 
-        // Mock API request for registration
         return axios.post("https://jsonplaceholder.typicode.com/posts", {
           first_name,
           last_name,
@@ -56,8 +55,15 @@ export default function SignUp() {
           career,
         });
       })
-      .then((response) => {
+      .then(() => {
         setMessage("Account created successfully!");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+        setMessage("There was an error submitting the form.");
+      })
+      .finally(() => {
         setLoading(false);
         // Reset form fields
         setFirst_name("");
@@ -70,13 +76,6 @@ export default function SignUp() {
         setCountry("");
         setCareer("");
         setAccept(false);
-        // Redirect to the login page after successful signup
-        navigate("/logIn");
-      })
-      .catch((error) => {
-        console.error("Error submitting form:", error);
-        setMessage("There was an error submitting the form.");
-        setLoading(false);
       });
   }
 
@@ -177,7 +176,7 @@ export default function SignUp() {
           />
           <div className="button" style={{ textAlign: "center" }}>
             <button id="button" type="submit">
-              {loading ? "Submitting..." : "Sign Up"}
+              {loading ? "registering..." : "Sign Up"}
             </button>
           </div>
           {message && <p className="message">{message}</p>}

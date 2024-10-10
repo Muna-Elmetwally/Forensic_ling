@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
+import Cookies from "js-cookie";
 
 export default function LogIn() {
   const [email, setEmail] = useState("");
@@ -14,11 +15,10 @@ export default function LogIn() {
   const { logIn } = useAuth();
 
   useEffect(() => {
-    // Check local storage to see if user is already logged in
-    const storedEmail = localStorage.getItem("userEmail");
+    const storedEmail = Cookies.get("userEmail");
     if (storedEmail) {
-      logIn(); // Call logIn to update authentication state
-      navigate("/home"); // Redirect to home if logged in
+      logIn();
+      navigate("/home"); // Exit if validation fails
     }
   }, [logIn, navigate]);
 
@@ -33,35 +33,32 @@ export default function LogIn() {
     setLoading(true);
 
     axios
-      .post("https://jsonplaceholder.typicode.com/posts", {
-        email,
-        password,
-      })
+      .post("https://jsonplaceholder.typicode.com/posts", { email, password })
       .then((response) => {
         console.log("Mock API response:", response.data);
 
-        // Replace this with actual API logic for user validation
+        // Mock API logic, replace with your actual authentication logic
         if (response.data.email === email) {
           setMessage("Logged in successfully!");
-          logIn(); // Call logIn to update authentication state
-
+          logIn();
           // Store user email in local storage
           localStorage.setItem("userEmail", email);
-
+          Cookies.set("userEmail", email, { expires: 30 });
           navigate("/home");
         } else {
           setMessage("Invalid email or password.");
         }
-        setLoading(false);
-        // Reset form fields
-        setEmail("");
-        setPassword("");
-        setAccept(false);
       })
       .catch((error) => {
         console.error("Error submitting form:", error);
         setMessage("There was an error submitting the form.");
+      })
+      .finally(() => {
+        // Reset form fields
         setLoading(false);
+        setEmail("");
+        setPassword("");
+        setAccept(false);
       });
   }
 
@@ -79,7 +76,6 @@ export default function LogIn() {
             autoComplete="email"
             required
           />
-
           <label htmlFor="password">Password</label>
           <input
             id="password"
@@ -93,10 +89,9 @@ export default function LogIn() {
           {password.length < 8 && accept && (
             <p className="error">Password must be at least 8 characters</p>
           )}
-
           <div className="button" style={{ textAlign: "center" }}>
-            <button id="button" type="submit">
-              {loading ? "Logging..." : "Log In"}{" "}
+            <button id="button" type="submit" disabled={loading}>
+              {loading ? "Logging..." : "Log In"}
             </button>
           </div>
           {message && <p className="message">{message}</p>}

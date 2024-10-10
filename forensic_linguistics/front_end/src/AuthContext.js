@@ -5,7 +5,7 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  // Check local storage for user data
   useEffect(() => {
     const userEmail = Cookies.get("userEmail");
     setIsAuthenticated(!!userEmail); // Convert to boolean
@@ -17,7 +17,7 @@ export function AuthProvider({ children }) {
 
   function logOut() {
     localStorage.removeItem("userEmail");
-    Cookies.remove("userEmail");
+    Cookies.remove("userEmail"); // clear user data from the local storage
     setIsAuthenticated(false);
   }
 

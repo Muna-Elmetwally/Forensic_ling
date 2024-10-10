@@ -1,32 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../AuthContext"; // Import the useAuth hook
+import { useAuth } from "../AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
-  const { isAuthenticated, logOut } = useAuth(); // Call useAuth to access authentication state and logOut function
+  const { isAuthenticated, logOut } = useAuth();
 
   return (
     <div className="Header">
       <header className="d-flex">
-        <div className="d-flex">
+        <nav className="d-flex">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Case Studies</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/case-studies">Case Studies</Link>
+            </li>
           </ul>
-        </div>
-        {isAuthenticated ? ( // Check if the user is authenticated
+        </nav>
+        {isAuthenticated ? (
           <button className="logout-nav" onClick={logOut}>
             Log Out <FontAwesomeIcon icon={faSignOutAlt} />
-          </button> // Show Log Out button if authenticated
+          </button>
         ) : (
           <div className="d-flex">
-            <Link to="/Signup" className="signup_nav">
+            <Link to="/signup" className="signup_nav">
               Sign Up
             </Link>
-            <Link to="/LogIn" className="login_nav">
+            <Link to="/login" className="login_nav">
               Log In
             </Link>
           </div>
