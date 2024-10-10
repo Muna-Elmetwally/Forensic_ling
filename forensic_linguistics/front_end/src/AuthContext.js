@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
 const AuthContext = createContext();
 
@@ -6,11 +7,8 @@ export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check local storage for user data
-    const userEmail = localStorage.getItem("userEmail");
-    if (userEmail) {
-      setIsAuthenticated(true); // User is logged in
-    }
+    const userEmail = Cookies.get("userEmail");
+    setIsAuthenticated(!!userEmail); // Convert to boolean
   }, []);
 
   function logIn() {
@@ -18,9 +16,9 @@ export function AuthProvider({ children }) {
   }
 
   function logOut() {
-    // Clear user data from local storage
     localStorage.removeItem("userEmail");
-    setIsAuthenticated(false); // Update authentication state
+    Cookies.remove("userEmail");
+    setIsAuthenticated(false);
   }
 
   return (
