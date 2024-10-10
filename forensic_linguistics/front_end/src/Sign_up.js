@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const [first_name, setFirst_name] = useState("");
@@ -11,16 +12,15 @@ export default function SignUp() {
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
   const [career, setCareer] = useState("");
-  const [accept, setAccept] = useState(false); // For error message rendering
-  const [flag, setFlag] = useState(false); // Sending APIs
+  const [accept, setAccept] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false); // Loading state for API call
 
-  console.log(flag);
+  const navigate = useNavigate();
 
   function submit(e) {
     e.preventDefault();
-    setAccept(true); // To trigger validation error messages
+    setAccept(true);
 
     // Input validation
     if (
@@ -29,30 +29,36 @@ export default function SignUp() {
       password.length < 8 ||
       passwordR !== password
     ) {
-      setFlag(false);
       return; // Exit if validation fails
     }
 
-    // If inputs are valid, set the flag to true
-    setFlag(true);
-    setLoading(true); // Set loading state while making API call
+    setLoading(true);
 
-    // Mock API request using axios
+    // Mock API request to check if the email already exists
     axios
-      .post("https://jsonplaceholder.typicode.com/posts", {
-        first_name,
-        last_name,
-        username,
-        email,
-        password,
-        phone,
-        country,
-        career,
+      .post("https://jsonplaceholder.typicode.com/posts", { email })
+      .then((response) => {
+        if (response.data.email === email) {
+          setMessage("An account with this email already exists.");
+          setLoading(false);
+          return; // Exit the function
+        }
+
+        // Mock API request for registration
+        return axios.post("https://jsonplaceholder.typicode.com/posts", {
+          first_name,
+          last_name,
+          username,
+          email,
+          password,
+          phone,
+          country,
+          career,
+        });
       })
       .then((response) => {
-        console.log("Mock API response:", response.data);
-        setMessage("Form submitted successfully!"); // Success message
-        setLoading(false); // Stop loading
+        setMessage("Account created successfully!");
+        setLoading(false);
         // Reset form fields
         setFirst_name("");
         setLast_name("");
@@ -64,11 +70,13 @@ export default function SignUp() {
         setCountry("");
         setCareer("");
         setAccept(false);
+        // Redirect to the login page after successful signup
+        navigate("/logIn");
       })
       .catch((error) => {
         console.error("Error submitting form:", error);
         setMessage("There was an error submitting the form.");
-        setLoading(false); // Stop loading
+        setLoading(false);
       });
   }
 

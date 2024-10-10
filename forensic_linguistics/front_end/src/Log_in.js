@@ -1,32 +1,37 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 
-export default function logIn() {
+export default function LogIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const [accept, setAccept] = useState(false); // For error message rendering
-  const [flag, setFlag] = useState(false); // Sending APIs
+  const [accept, setAccept] = useState(false);
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false); // Loading state for API call
+  const [loading, setLoading] = useState(false);
 
-  console.log(flag);
+  const navigate = useNavigate();
+  const { logIn } = useAuth();
+
+  useEffect(() => {
+    // Check local storage to see if user is already logged in
+    const storedEmail = localStorage.getItem("userEmail");
+    if (storedEmail) {
+      logIn(); // Call logIn to update authentication state
+      navigate("/home"); // Redirect to home if logged in
+    }
+  }, [logIn, navigate]);
 
   function submit(e) {
     e.preventDefault();
-    setAccept(true); // To trigger validation error messages
+    setAccept(true);
 
-    // Input validation
     if (email === "" || password.length < 8) {
-      setFlag(false);
       return; // Exit if validation fails
     }
 
-    // If inputs are valid, set the flag to true
-    setFlag(true);
-    setLoading(true); // Set loading state while making API call
+    setLoading(true);
 
-    // Mock API request using axios
     axios
       .post("https://jsonplaceholder.typicode.com/posts", {
         email,
@@ -34,8 +39,20 @@ export default function logIn() {
       })
       .then((response) => {
         console.log("Mock API response:", response.data);
-        setMessage("Form submitted successfully!"); // Success message
-        setLoading(false); // Stop loading
+
+        // Replace this with actual API logic for user validation
+        if (response.data.email === email) {
+          setMessage("Logged in successfully!");
+          logIn(); // Call logIn to update authentication state
+
+          // Store user email in local storage
+          localStorage.setItem("userEmail", email);
+
+          navigate("/home");
+        } else {
+          setMessage("Invalid email or password.");
+        }
+        setLoading(false);
         // Reset form fields
         setEmail("");
         setPassword("");
@@ -44,7 +61,7 @@ export default function logIn() {
       .catch((error) => {
         console.error("Error submitting form:", error);
         setMessage("There was an error submitting the form.");
-        setLoading(false); // Stop loading
+        setLoading(false);
       });
   }
 
@@ -79,7 +96,7 @@ export default function logIn() {
 
           <div className="button" style={{ textAlign: "center" }}>
             <button id="button" type="submit">
-              {loading ? "Submitting..." : "log-In"}
+              {loading ? "Logging..." : "Log In"}{" "}
             </button>
           </div>
           {message && <p className="message">{message}</p>}

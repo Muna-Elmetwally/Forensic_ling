@@ -19,7 +19,8 @@ body {
 }
 /* sign-up form*/
 /* Parent Container Styling */
-.signup-parent {
+.signup-parent,
+.logIn-parent {
   flex: 1; /* Take up remaining space between header and footer */
   display: flex;
   justify-content: center;
@@ -134,7 +135,8 @@ body {
 }
 
 .signup_nav,
-.login_nav {
+.login_nav,
+.logout-nav {
   padding: 10px 15px; /* Padding for the buttons */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
@@ -150,7 +152,8 @@ body {
   margin-right: 10px; /* Space between buttons */
 }
 
-.login_nav {
+.login_nav,
+.logout-nav {
   background-color: #003d73; /* Deep Blue color for Log In */
 }
 
@@ -160,7 +163,8 @@ body {
   transform: translateY(-2px); /* Lift effect on hover */
 }
 
-.login_nav:hover {
+.login_nav:hover,
+.logout-nav:hover {
   background-color: #002953; /* Darker shade of Blue on hover */
   transform: translateY(-2px); /* Lift effect on hover */
 }
