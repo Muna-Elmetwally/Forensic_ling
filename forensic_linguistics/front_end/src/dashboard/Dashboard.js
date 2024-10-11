@@ -6,8 +6,8 @@ const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [currentUser, setCurrentUser] = useState({ role: "admin" }); // Mock current user
 
+  // Fetch users from the mock API on component mount
   useEffect(() => {
     const fetchUsers = async () => {
       const response = await fetch("http://localhost:5000/users");
@@ -19,8 +19,9 @@ const Dashboard = () => {
 
   const addUser = async () => {
     if (email && password) {
-      const newUser = { email, password, role: "user" }; // Regular user role
+      const newUser = { email, password };
 
+      // POST new user to the mock API
       await fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
@@ -36,30 +37,12 @@ const Dashboard = () => {
   };
 
   const removeUser = async (id) => {
+    // DELETE user from the mock API
     await fetch(`http://localhost:5000/users/${id}`, {
       method: "DELETE",
     });
     setUsers(users.filter((user) => user.id !== id));
   };
-
-  const updateEmail = async (id, newEmail) => {
-    const updatedUser = {
-      ...users.find((user) => user.id === id),
-      email: newEmail,
-    };
-
-    await fetch(`http://localhost:5000/users/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedUser),
-    });
-
-    setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
-  };
-
-  const isAdmin = currentUser.role === "admin";
 
   return (
     <div className="dashboard-container">
@@ -98,31 +81,22 @@ const Dashboard = () => {
             <tr>
               <th>ID</th>
               <th>Email</th>
-              {isAdmin && <th>Actions</th>}
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {users.map((user) => (
               <tr key={user.id}>
                 <td>{user.id}</td>
+                <td>{user.email}</td>
                 <td>
-                  <input
-                    type="email"
-                    value={user.email}
-                    onChange={(e) => updateEmail(user.id, e.target.value)}
-                    disabled={!isAdmin} // Disable if not admin
-                  />
+                  <button
+                    className="action-button remove"
+                    onClick={() => removeUser(user.id)}
+                  >
+                    Remove
+                  </button>
                 </td>
-                {isAdmin && (
-                  <td>
-                    <button
-                      className="action-button remove"
-                      onClick={() => removeUser(user.id)}
-                    >
-                      Remove
-                    </button>
-                  </td>
-                )}
               </tr>
             ))}
           </tbody>
