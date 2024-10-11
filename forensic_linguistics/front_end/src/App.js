@@ -4,14 +4,13 @@ import Logo from "./components/Logo";
 import SignUp from "./Sign_up";
 import LogIn from "./Log_in";
 import Home from "./Home";
-import Dashboard from "./Dashboard";
 import Footer from "./components/Footer";
+import Dashboard from "./dashboard/Dashboard"; // Import the Dashboard component
 import { AuthProvider } from "./AuthContext"; // Import the AuthProvider
 
 export default function App() {
   return (
     <AuthProvider>
-      {/* <div> */}
       <div>
         <Header />
         <Logo />
@@ -22,10 +21,7 @@ export default function App() {
           <Route path="/Dashboard" element={<Dashboard />} />
         </Routes>
       </div>
-      <div>
-        <Footer />
-      </div>
-      {/* </div> */}
+      <Footer />
     </AuthProvider>
   );
 }
