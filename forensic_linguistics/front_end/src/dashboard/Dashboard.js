@@ -52,9 +52,6 @@ const Dashboard = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/Dashboard">Dashboard</Link>
-          </li>
         </ul>
       </div>
       <div className="content">
