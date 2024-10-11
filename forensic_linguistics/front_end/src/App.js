@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Logo from "./components/Logo";
-import SignUp from "./Sign_up";
-import LogIn from "./Log_in";
-import Home from "./Home";
+import SignUp from "./pages/Sign_up";
+import LogIn from "./pages/Log_in";
+import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Dashboard from "./dashboard/Dashboard"; // Import the Dashboard component
-import { AuthProvider } from "./AuthContext"; // Import the AuthProvider
+import Dashboard from "./pages/dashboard/Dashboard"; // Import the Dashboard component
+import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
 
 export default function App() {
   return (
