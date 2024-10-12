@@ -10,7 +10,7 @@ const Dashboard = () => {
   // Fetch users from the mock API on component mount
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch("http://localhost:3000/users");
+      const response = await fetch("http://localhost:5000/users");
       const data = await response.json();
       setUsers(data);
     };
@@ -22,7 +22,7 @@ const Dashboard = () => {
       const newUser = { email, password };
 
       // POST new user to the mock API
-      await fetch("http://localhost:3000/users", {
+      await fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,7 +30,11 @@ const Dashboard = () => {
         body: JSON.stringify(newUser),
       });
 
-      setUsers([...users, newUser]);
+      // Fetch updated user list
+      const response = await fetch("http://localhost:5000/users");
+      const updatedUsers = await response.json();
+      setUsers(updatedUsers);
+
       setEmail("");
       setPassword("");
     }
@@ -38,7 +42,7 @@ const Dashboard = () => {
 
   const removeUser = async (id) => {
     // DELETE user from the mock API
-    await fetch(`http://localhost:3000/users/${id}`, {
+    await fetch(`http://localhost:5000/users/${id}`, {
       method: "DELETE",
     });
     setUsers(users.filter((user) => user.id !== id));
