@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
+import NavMenu from "../pages/NavMenu";
+import { Link } from "react-router-dom";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -17,6 +19,11 @@ export default function App() {
 
   return (
     <div className="search-bar-container">
+      <div>
+        <Link to="/NavMenu">
+          <NavMenu />
+        </Link>
+      </div>
       <form onSubmit={handleSearch}>
         <input
           type="text"

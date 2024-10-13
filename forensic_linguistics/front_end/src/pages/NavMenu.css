@@ -1,47 +1,81 @@
-Basic layout nav ul {
-  list-style-type: none;
-  display: flex;
+.menu-bar-container {
+  position: absolute;
+  top: 60px; /* Adjust this based on your header height */
+  right: 20px; /* Adjust to position it beside the search bar */
+  z-index: 1000;
 }
 
-nav ul li {
-  margin-right: 20px;
+.menu-button {
+  background-color: #005bb5; /* Button color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between button and dropdown */
+}
+
+.menu-icon {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 20px; /* Adjust the size of the icon */
+}
+
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white; /* Dropdown background */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+}
+
+.dropdown-container {
   position: relative;
 }
 
-/* Dropdown menu styling */
-nav ul .dropdown-container:hover .dropdown {
-  display: block;
+.dropdown {
+  display: none; /* Hide dropdowns initially */
+  position: relative; /* Change to relative to expand within the menu */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 1000; /* Ensure dropdown appears above other elements */
 }
 
-nav ul .dropdown {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 5px;
+.dropdown-container:hover .dropdown {
+  display: block; /* Show dropdown on hover */
 }
 
 .dropdown li {
-  margin: 0;
+  padding: 10px;
 }
 
-/* Menu toggle (for mobile) */
-.menu-toggle {
-  display: none; /* Show this button in mobile layout */
+.dropdown li:hover {
+  background-color: #f1f1f1;
 }
 
+.dropdown a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .menu-bar-container {
+    position: relative; /* Change to relative on smaller screens */
+    right: 0;
   }
 
-  .menu {
-    display: none;
-    flex-direction: column;
+  .menu-button {
+    width: 100%; /* Full width button on mobile */
   }
 
-  .menu.open {
-    display: flex;
+  .menu-list {
+    position: static; /* Change dropdown position */
+    box-shadow: none; /* Remove shadow on mobile */
   }
 }
