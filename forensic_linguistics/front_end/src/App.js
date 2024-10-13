@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Dashboard from "./pages/dashboard/Dashboard"; // Import the Dashboard component
 import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
 import SearchBar from "./components/SearchBar";
+// import "./style.css";
 
 export default function App() {
   return (

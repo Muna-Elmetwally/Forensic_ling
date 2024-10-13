@@ -2,10 +2,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../pages/AuthContext";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import Logo from "./Logo";
+import "../style.css";
 
 // const Header = ({ isAuthenticated, logOut }) => {
 export default function Header() {

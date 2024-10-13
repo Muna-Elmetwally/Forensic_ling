@@ -1,7 +1,7 @@
 .menu-bar-container {
   position: absolute;
-  top: 60px; /* Adjust this based on your header height */
-  right: 20px; /* Adjust to position it beside the search bar */
+  top: 70px; /* Adjust this based on your header height */
+  left: 20px; /* Adjust to position it beside the search bar */
   z-index: 1000;
 }
 
