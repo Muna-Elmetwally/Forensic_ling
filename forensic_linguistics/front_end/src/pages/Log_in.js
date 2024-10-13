@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 import Cookies from "js-cookie";
+import "./Login.css"; // Importing external CSS for styling
 
 export default function LogIn() {
   const [email, setEmail] = useState("");
