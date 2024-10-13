@@ -16,6 +16,7 @@ body {
   font-family: "Rajdhani", sans-serif; /* Use Rajdhani font */
   display: flex; /* Enable flexbox layout for body */
   flex-direction: column; /* Stack header, main, and footer vertically */
+  background-color: #f2f2f2; /* Light Gray background for the whole page */
 }
 /* sign-up form*/
 /* Parent Container Styling */
@@ -117,10 +118,6 @@ label {
   margin-top: 5px;
 }
 
-body {
-  font-family: Arial, sans-serif; /* Default font */
-  background-color: #f2f2f2; /* Light Gray background for the whole page */
-}
 /* header */
 /* login and sign up in header */
 .d-flex {
