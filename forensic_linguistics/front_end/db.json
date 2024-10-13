@@ -8,5 +8,16 @@
       "email": "jkjmh",
       "password": "kujbkhk"
     }
+  ],
+
+  "search": [
+    {
+      "id": 1,
+      "name": "Forensic Linguistics Overview"
+    },
+    {
+      "id": 2,
+      "name": "Phonetics and Linguistics"
+    }
   ]
 }

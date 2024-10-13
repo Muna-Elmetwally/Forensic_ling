@@ -1,0 +1,47 @@
+Basic layout nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+  position: relative;
+}
+
+/* Dropdown menu styling */
+nav ul .dropdown-container:hover .dropdown {
+  display: block;
+}
+
+nav ul .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+/* Menu toggle (for mobile) */
+.menu-toggle {
+  display: none; /* Show this button in mobile layout */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+}

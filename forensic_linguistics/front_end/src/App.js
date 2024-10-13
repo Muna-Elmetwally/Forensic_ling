@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Dashboard from "./pages/dashboard/Dashboard"; // Import the Dashboard component
 import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
+import SearchBar from "./components/SearchBar";
+import Slidbar from "./pages/Slidbar";
 
 export default function App() {
   return (
@@ -15,7 +17,9 @@ export default function App() {
       <div>
         <Header />
         <Logo />
+        <SearchBar />
         <Routes>
+          <Route path="/Slidbar" element={<Slidbar />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Signup" element={<SignUp />} />
           <Route path="/logIn" element={<LogIn />} />
