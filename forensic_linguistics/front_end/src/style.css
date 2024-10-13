@@ -13,7 +13,7 @@ body {
 
 /* Body Styles */
 body {
-  font-family: "Cairo", sans-serif; /* Ensure font loads properly */
+  font-family: "Rajdhani", sans-serif; /* Use Rajdhani font */
   display: flex; /* Enable flexbox layout for body */
   flex-direction: column; /* Stack header, main, and footer vertically */
 }
