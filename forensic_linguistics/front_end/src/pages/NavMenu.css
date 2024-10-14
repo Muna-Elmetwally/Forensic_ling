@@ -1,42 +1,43 @@
 /* NavMenu.css */
 
 .menu-bar-containerr {
-  position: fixed; /* Position it relative to the viewport */
-  top: 52;
-  left: 0; /* Move the container to the left side of the screen */
-  width: auto;
+  position: fixed; /* Keep it fixed relative to the viewport */
+  top: 52px; /* Adjusted to match your taskbar height */
+  left: 0; /* Align it to the left side of the screen */
+  width: auto; /* Auto width based on content */
   padding: 2px;
   padding-top: 5px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  justify-content: flex-start; /* Keep items aligned to the start */
+  z-index: 10; /* Ensure it’s above other elements */
+  display: flex; /* Use flex for better alignment */
+  flex-direction: column; /* Stack items vertically */
 }
 
 .menu-list {
-  list-style-type: none;
+  list-style-type: none; /* Remove default list styles */
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: absolute; /* Absolute positioning for dropdown */
   top: 50px; /* Position the dropdown below the button */
-  left: 0; /* Ensure dropdown aligns to the left */
+  left: 0; /* Align dropdown with the menu button */
   background-color: #f8f9fa; /* Light background for dropdown */
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  z-index: 10; /* Ensure dropdown is above other elements */
 }
 
 .menu-button {
-  background-color: #0a4e70;
-  color: #faf6e9;
-  outline: #faf6e9;
-  border: #faf6e9;
+  background-color: #0a4e70; /* Background color for menu button */
+  color: #faf6e9; /* Text color */
+  outline: none; /* Remove default outline */
+  border: none; /* No border */
   border-radius: 5px;
-  padding: 8px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: -29px;
+  padding: 8px 15px; /* Padding for button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+  margin-top: 0; /* Reset margin */
 }
 
 .menu-button:hover {
@@ -48,41 +49,41 @@
 }
 
 .menu-link {
-  display: block;
-  padding: 10px 15px;
-  color: #004b87;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  display: block; /* Block display for links */
+  padding: 10px 15px; /* Padding for links */
+  color: #004b87; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
 }
 
 .menu-link:hover {
-  background-color: #e9ecef;
-  color: #0056b3;
+  background-color: #e9ecef; /* Background on hover */
+  color: #0056b3; /* Color on hover */
 }
 
 .dropdown-containerr {
-  position: relative;
+  position: relative; /* Position for dropdown menu */
 }
 
 .dropdownn {
   display: none; /* Hidden by default */
-  position: absolute;
-  top: 100%; /* Position below the parent */
-  left: 0;
+  position: absolute; /* Position below the parent */
+  top: 100%; /* Align to bottom of parent */
+  left: 0; /* Align to left */
   background: linear-gradient(
     180deg,
     #0a4e70,
     #0056b3
   ); /* Gradient background for depth */
-  list-style-type: none;
+  list-style-type: none; /* Remove list styles */
   margin: 0;
   padding: 0;
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
-  z-index: 10;
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
-  opacity: 0; /* Start invisible for transition */
-  transform: translateY(10px); /* Slightly offset for animation */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  z-index: 10; /* Ensure dropdown is above other elements */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  opacity: 0; /* Start invisible */
+  transform: translateY(10px); /* Offset for animation */
 }
 
 .dropdown-containerr:hover .dropdownn {
@@ -92,20 +93,20 @@
 }
 
 .dropdownn-link {
-  padding: 12px 20px; /* Slightly larger padding for a more spacious feel */
-  color: #ffffff; /* White text for better contrast */
-  text-decoration: none;
-  display: block; /* Ensure full width */
+  padding: 12px 20px; /* Padding for dropdown items */
+  color: #ffffff; /* White text */
+  text-decoration: none; /* No underline */
+  display: block; /* Full width */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .dropdownn-link:hover {
   background-color: rgba(255, 255, 255, 0.2); /* Translucent white on hover */
   color: #6ee2f5; /* Lighter blue on hover */
-  transform: scale(1.05); /* Slightly enlarge the item */
+  transform: scale(1.05); /* Slightly enlarge item */
 }
 
-/* Optional: Add a subtle glow effect */
+/* Optional: Subtle glow effect */
 .dropdownn-link:focus {
   outline: none; /* Remove default outline */
   box-shadow: 0 0 5px rgba(110, 226, 245, 0.8); /* Glow effect */

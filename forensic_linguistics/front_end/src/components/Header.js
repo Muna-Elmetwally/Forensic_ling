@@ -13,14 +13,14 @@ export default function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/Home">
+        <Link to="/">
           <Logo />
         </Link>
       </div>
       <nav>
         <ul className="nav-list">
           <li>
-            <Link className="header-link" to="/Home">
+            <Link className="header-link" to="/">
               Home
             </Link>
           </li>

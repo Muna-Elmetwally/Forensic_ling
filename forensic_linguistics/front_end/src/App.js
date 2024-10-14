@@ -9,7 +9,9 @@ import Footer from "./components/Footer";
 import Dashboard from "./pages/dashboard/Dashboard"; // Import the Dashboard component
 import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
 import SearchBar from "./components/SearchBar";
-// import "./style.css";
+import About from "./pages/About";
+import Details from "./pages/Details";
+import "./style.css";
 
 export default function App() {
   return (
@@ -19,10 +21,13 @@ export default function App() {
           <Header />
           <SearchBar />
           <Routes>
-            <Route path="/Home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/Signup" element={<SignUp />} />
             <Route path="/logIn" element={<LogIn />} />
+            <Route path="SearchBar" element={<SearchBar />} />
             <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Details" element={<Details />} />
           </Routes>
         </div>
       </div>
