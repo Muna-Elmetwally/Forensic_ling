@@ -10,7 +10,6 @@ import Dashboard from "./pages/dashboard/Dashboard"; // Import the Dashboard com
 import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
 import SearchBar from "./components/SearchBar";
 import About from "./pages/About";
-import Details from "./pages/Details";
 import "./style.css";
 
 export default function App() {
@@ -27,7 +26,6 @@ export default function App() {
             <Route path="SearchBar" element={<SearchBar />} />
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/About" element={<About />} />
-            <Route path="/Details" element={<Details />} />
           </Routes>
         </div>
       </div>

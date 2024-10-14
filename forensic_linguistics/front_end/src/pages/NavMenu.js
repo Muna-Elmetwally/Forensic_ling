@@ -18,7 +18,7 @@ const MenuBar = () => {
       {isOpen && (
         <ul className="menu-list">
           <li>
-            <Link to="/Home" className="menu-link">
+            <Link to="/" className="menu-link">
               Home
             </Link>
           </li>
