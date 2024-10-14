@@ -1,5 +1,5 @@
 import React from "react";
-import About from "./About";
+import About from "../Write/Write";
 // import Footer from "../components/Footer";
 
 export default function Home() {
