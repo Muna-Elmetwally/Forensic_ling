@@ -4,13 +4,13 @@ export default function Sidebar() {
     <div className="Sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
-        <div className="sidebarimg">
-          <img
-            style={{ width: "80%", height: "100%" }}
-            src={require("../../assets/legal (2).jpg")}
-            alt="search"
-          />
-        </div>
+        {/* <div className="sidebarimg"> */}
+        <img
+          style={{ width: "80%", height: "100%" }}
+          src={require("../../assets/legal (2).jpg")}
+          alt="search"
+        />
+        {/* </div> */}
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
           neque nesciunt natus provident aut, aliquid iste molestiae nam vel
@@ -20,7 +20,9 @@ export default function Sidebar() {
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">categories </span>
-        <ul className="sidebarListItem">
+        <ul className="sidebarList">
+          <li className="sidebarListItem">life </li>
+          <li className="sidebarListItem">life </li>
           <li className="sidebarListItem">life </li>
           <li className="sidebarListItem">life </li>
           <li className="sidebarListItem">life </li>
