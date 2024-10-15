@@ -3,8 +3,10 @@ export default function Header() {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerSubtitle1">blog</span>
-        <span className="headerSubtitle2">r</span>
+        <span className="headerSubtitle1">
+          <h1>World Wide Blog</h1>
+        </span>
+        <span className="headerSubtitle2">Gather All FORENSIC LINGUISTS</span>
       </div>
       <img
         className="headerimg"
