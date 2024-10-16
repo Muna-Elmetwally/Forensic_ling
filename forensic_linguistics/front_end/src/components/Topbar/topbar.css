@@ -30,7 +30,8 @@
 }
 
 /* icons */
-.topIcon {
+.topIcon,
+.logouticon {
   font-size: 20px;
   margin-right: 10px;
   color: #444;

@@ -21,10 +21,10 @@ export default function TopBar() {
           <li className="topListItem">News</li>
 
           <li className="topListItem">Research Papers</li>
-          {/* <li className="topListItem">
+          <li className="topListItem">
             LogOut
-            <i className="logout icon fa-solid fa-right-from-bracket"></i>{" "}
-          </li> */}
+            <i className="logouticon fa-solid fa-right-from-bracket"></i>{" "}
+          </li>
         </ul>
       </div>
       <div className="topRight">
@@ -35,9 +35,9 @@ export default function TopBar() {
         />
         <i className="SearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
-      <button className="logout-button">
+      {/* <button className="logout-button">
         LogOut <i className="logouticon fa-solid fa-right-from-bracket"></i>
-      </button>
+      </button> */}
     </div>
   );
 }

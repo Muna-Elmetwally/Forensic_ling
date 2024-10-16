@@ -1,11 +1,11 @@
 import TopBar from "./components/Topbar/TopBar";
 // import Home from "./pages/Home/Home.jsx";
-import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
 export default function App() {
   return (
     <>
       <TopBar />
-      <Register />
+      <Login />
     </>
   );
 }
