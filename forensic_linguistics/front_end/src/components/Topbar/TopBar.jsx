@@ -14,7 +14,13 @@ export default function TopBar() {
           <li className="topListItem">
             Write & Blog <i className="writeicon fa-solid fa-pen-to-square"></i>
           </li>
-          <li className="topListItem">Contact</li>
+          <li className="topListItem">Events</li>
+
+          <li className="topListItem">About</li>
+
+          <li className="topListItem">News</li>
+
+          <li className="topListItem">Research Papers</li>
           {/* <li className="topListItem">
             LogOut
             <i className="logout icon fa-solid fa-right-from-bracket"></i>{" "}
