@@ -1,0 +1,11 @@
+.posts {
+  flex: 10;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 10px; /*optional for spacing between items */
+}
+.posts > * {
+  flex: 1 1 calc(33.33% - 10px); /* Adjust size and margin for responsive grid */
+  box-sizing: border-box;
+}
