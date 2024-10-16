@@ -4,7 +4,7 @@ export default function Post() {
     <div className="post">
       <img
         className="postimg"
-        src={require("../../assets/legal (2).jpg")}
+        src="../../assets/legal (2).jpg"
         alt="Header-Image"
       />
       <div className="postdetails">

@@ -28,11 +28,7 @@ export default function TopBar() {
         </ul>
       </div>
       <div className="topRight">
-        <img
-          className="topimg"
-          src={require("../../assets/legal (2).jpg")}
-          alt="search"
-        />
+        <img className="topimg" src="../../assets/legal (2).jpg" alt="search" />
         <i className="SearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
       {/* <button className="logout-button">

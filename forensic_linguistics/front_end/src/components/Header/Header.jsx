@@ -10,7 +10,7 @@ export default function Header() {
       </div>
       <img
         className="headerimg"
-        src={require("../../assets/legal (2).jpg")}
+        src="../../assets/legal (2).jpg"
         alt="Header-Image"
       />
     </div>

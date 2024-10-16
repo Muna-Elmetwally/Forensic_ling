@@ -22,8 +22,6 @@ export default function App() {
         <Route path="/login" element={currentUser ? <Home /> : <Login />} />
         <Route path="/post/:id" element={<Single />} />
         <Route path="/write" element={currentUser ? <Write /> : <Login />} />
-        <Route path="*" element={<NotFound />} />{" "}
-        {/* Fallback route for 404 errors */}
         <Route
           path="/settings"
           element={currentUser ? <Settings /> : <Login />}

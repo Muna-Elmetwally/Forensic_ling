@@ -7,7 +7,7 @@ export default function Sidebar() {
         {/* <div className="sidebarimg"> */}
         <img
           style={{ width: "80%", height: "100%" }}
-          src={require("../../assets/legal (2).jpg")}
+          src="../../assets/legal (2).jpg"
           alt="search"
         />
         {/* </div> */}

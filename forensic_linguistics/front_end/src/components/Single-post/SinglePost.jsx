@@ -4,7 +4,7 @@ export default function SinglePost() {
     <div className="singlepost">
       <div className="singlepostwraper">
         <img
-          src={require("../../assets/legal (2).jpg")}
+          src="../../assets/legal (2).jpg"
           alt="search"
           className="singlepostImg"
         />
