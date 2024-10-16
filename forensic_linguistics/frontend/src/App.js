@@ -15,6 +15,7 @@ function App() {
       <Topbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
+
         <Route path="/posts" element={<Homepage />} />
         <Route
           path="/register"
