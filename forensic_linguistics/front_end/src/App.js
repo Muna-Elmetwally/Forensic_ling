@@ -1,3 +1,5 @@
+import React from "react";
+
 import TopBar from "./components/Topbar/TopBar";
 // import Home from "./pages/Home/Home";
 // import Login from "./pages/Login/Login";
@@ -8,7 +10,7 @@ import TopBar from "./components/Topbar/TopBar";
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export default function App() {
-  const currentUser = true;
+  // const currentUser = true;
   return (
     // <Router>
     <TopBar />
