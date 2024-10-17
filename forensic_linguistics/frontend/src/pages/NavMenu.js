@@ -131,7 +131,7 @@ const MenuBar = () => {
             </ul>
           </li>
           <li className="dropdown-containerr">
-            <Link to="/TopUni" className="menu-link">
+            <Link to="/University" className="menu-link">
               Top Universities
             </Link>
           </li>

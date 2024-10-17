@@ -13,7 +13,7 @@ import PostDetails from "./pages/PostDetails"; // The new PostDetails component
 import Post from "./pages/post/Post";
 import Services from "./pages/services/Services"; // Import your Services component
 import Career from "./pages/career/Career";
-
+import UniversityPage from "./pages/University/University";
 import "./style.css";
 
 export default function App() {
@@ -38,6 +38,7 @@ export default function App() {
             <Route path="/post" element={<PostDetails />} />
             <Route path="/services" element={<Services />} />
             <Route path="/Career" element={<Career />} />
+            <Route path="/University" element={<UniversityPage />} />
           </Routes>
         </div>
         {/* <Footer /> */}

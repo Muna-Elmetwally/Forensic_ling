@@ -1,0 +1,90 @@
+/* src/University.css */
+
+/* General page styling */
+.university-list {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Title Styling */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  background: #6ee2f5;
+  margin: 10px auto 0;
+  transition: width 0.3s ease-in-out;
+}
+
+h1:hover::after {
+  width: 200px;
+}
+
+/* University Card Styling */
+.university-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px;
+}
+
+.university-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* University Title Styling */
+.university-title {
+  font-size: 1.5rem;
+  color: #0073e6;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.university-title:hover {
+  color: #005bb5;
+}
+
+/* Know More Button */
+.know-more-button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.know-more-button:hover {
+  background-color: #005bb5;
+}
+
+/* Animation for card entry */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.university-card {
+  animation: fadeIn 0.6s ease;
+}
