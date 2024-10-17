@@ -69,7 +69,7 @@ export default function Header() {
             </ul>
           </li>
           <li>
-            <Link className="header-link" to="/Issues">
+            <Link className="header-link" to="/Legal">
               Legal & Ethical Issues
             </Link>
           </li>

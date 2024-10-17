@@ -1,0 +1,81 @@
+/* Legal.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.legal {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Initial opacity for fade-in effect */
+  transform: translateY(20px); /* Start below */
+  animation: fadeInUp 0.5s forwards; /* Animate on entry */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+h2 svg {
+  margin-right: 0.5rem; /* Space between the icon and text */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
