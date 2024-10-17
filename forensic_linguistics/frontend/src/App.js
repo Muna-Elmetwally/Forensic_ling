@@ -14,6 +14,9 @@ import Post from "./pages/post/Post";
 import Services from "./pages/services/Services"; // Import your Services component
 import Career from "./pages/career/Career";
 import UniversityPage from "./pages/University/University";
+import CaseStudies from "./pages/case studies/caseStudies";
+import Legal from "./pages/Legal/Legal";
+
 import "./style.css";
 
 export default function App() {
@@ -39,6 +42,8 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/Career" element={<Career />} />
             <Route path="/University" element={<UniversityPage />} />
+            <Route path="/CaseStudies" element={<CaseStudies />} />
+            <Route path="/Legal" element={<Legal />} />
           </Routes>
         </div>
         {/* <Footer /> */}
