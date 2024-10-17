@@ -1,4 +1,5 @@
 import "./About.css";
+import Slider from "./Techniques/Techniques";
 
 export default function About() {
   return (
@@ -10,11 +11,14 @@ export default function About() {
         </span>
       </div>
       <img className="AboutImg" src={require("../assets/l3.jpg")} alt="" />
-      <div>
+      {/* <div>
         <p className="about-paragraph">
           This is the additional paragraph that will appear when you click
           "Learn More".
         </p>
+      </div> */}
+      <div>
+        <Slider />
       </div>
     </div>
   );

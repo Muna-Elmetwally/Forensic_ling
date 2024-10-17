@@ -45,7 +45,7 @@ export default function LogIn() {
           // Store user email in local storage
           localStorage.setItem("userEmail", email);
           Cookies.set("userEmail", email, { expires: 30 });
-          navigate("/home");
+          navigate("/");
         } else {
           setMessage("Invalid email or password.");
         }

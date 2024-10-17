@@ -11,6 +11,8 @@ import About from "./pages/About";
 import MenuBar from "./pages/NavMenu";
 import PostDetails from "./pages/PostDetails"; // The new PostDetails component
 import Post from "./pages/post/Post";
+import Services from "./pages/services/Services"; // Import your Services component
+
 import "./style.css";
 
 export default function App() {
@@ -33,6 +35,7 @@ export default function App() {
             <Route path="/About" element={<About />} />
             <Route path="/posts" element={<Post />} />
             <Route path="/post" element={<PostDetails />} />{" "}
+            <Route path="/services" element={<Services />} />
           </Routes>
         </div>
         {/* <Footer /> */}
