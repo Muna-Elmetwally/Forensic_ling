@@ -1,0 +1,140 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2d333a;
+  padding: 20px;
+  color: #fff;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #6ee2f5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f3f4f6;
+  overflow-y: auto; /* Enable scrolling for content */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #374151;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.top-bar h1 {
+  margin: 0;
+}
+
+.top-bar button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.top-bar button:hover {
+  background-color: #218838;
+}
+
+/* User form styles */
+.user-form {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.user-form input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.user-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-form button:hover {
+  background-color: #218838;
+}
+
+/* Table styles */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #374151;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-table td {
+  background-color: #2d333a;
+  color: #d1d5db;
+  border-bottom: 1px solid #374151;
+}
+
+.user-table tr:hover {
+  background-color: #3b4252;
+}
+
+.action-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #c82333;
+}

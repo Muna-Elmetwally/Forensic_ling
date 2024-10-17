@@ -1,0 +1,53 @@
+.About {
+  margin-top: 60px;
+}
+
+.AboutTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+  color: #444;
+}
+
+.AboutTitleSm {
+  position: absolute;
+  top: 18%;
+  font-size: 20px;
+}
+
+.AboutTitleLg {
+  position: absolute;
+  top: 20%;
+  font-size: 100px;
+}
+
+.AboutImg {
+  width: 110%; /* Increase width beyond the container */
+  height: 600px; /* Increase the height */
+  margin-top: 42px;
+  object-fit: cover;
+  object-position: top;
+}
+.about-paragraph {
+  font-family: "Arial", sans-serif; /* Change to your preferred font */
+  font-size: 18px; /* Increase font size */
+  line-height: 1.6; /* Adjust line height for readability */
+  color: #333; /* Text color */
+  margin: 20px 0; /* Add more vertical spacing */
+  padding: 20px; /* Increase padding around the paragraph */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-left: 4px solid #0a4e70; /* A left border for emphasis */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  width: 80%; /* Adjust width as needed */
+  max-width: 800px; /* Set a maximum width */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+/* Add hover effect to make it interactive */
+.about-paragraph:hover {
+  background-color: #eef5f9; /* Slightly change background on hover */
+}

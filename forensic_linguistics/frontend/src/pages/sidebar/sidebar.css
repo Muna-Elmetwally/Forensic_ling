@@ -1,0 +1,106 @@
+.sidebar {
+  flex: 3;
+  height: fit-content;
+  margin: 20px;
+  padding-bottom: 30px;
+  background-color: #fdfbfb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebarTitle {
+  margin: 10px;
+  padding: 5px;
+  width: 80%;
+  border-top: solid 1px #a7a4a4;
+  border-bottom: solid 1px #a7a4a4;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  font-size: 12px;
+  line-height: 19px;
+  color: #222222;
+  font-weight: 600;
+}
+
+.sidebarItem > img {
+  margin-top: 15px;
+  width: 250px;
+  height: 250px;
+}
+
+.sidebarItem > p {
+  padding: 30px;
+}
+
+.sidebarList {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.sidebarListItem {
+  display: inline-block;
+  width: 50%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.sidebarSocial {
+  margin-top: 15px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarIcon {
+  font-size: 16px;
+  margin-left: 10px;
+}
+.sidebarVideo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.illustrationBox {
+  width: 80%; /* Adjust to match sidebar width */
+  background-color: #eef4f7;
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 4px solid #0a4e70;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boxTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a4e70;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.boxContent {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+.linkStyle {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.linkStyle:hover {
+  opacity: 0.8;
+}

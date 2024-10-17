@@ -1,36 +1,42 @@
-import Topbar from "./components/topbar/Topbar";
-import Homepage from "./pages/homepage/Homepage";
-import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
-import Settings from "./pages/settings/Settings";
-import Single from "./pages/single/Single";
-import Write from "./pages/write/Write";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import SignUp from "./pages/Sign_up";
+import LogIn from "./pages/Log_in";
+import Home from "./pages/Home";
+import Dashboard from "./pages/dashboard/Dashboard"; // Import the Dashboard component
+import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
+import SearchBar from "./components/SearchBar";
+import About from "./pages/About";
+import MenuBar from "./pages/NavMenu";
+import PostDetails from "./pages/PostDetails"; // The new PostDetails component
+import Post from "./pages/post/Post";
+import "./style.css";
 
-function App() {
-  const currentUser = true;
-
+export default function App() {
   return (
-    <Router>
-      <Topbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-
-        <Route path="/posts" element={<Homepage />} />
-        <Route
-          path="/register"
-          element={currentUser ? <Homepage /> : <Register />}
-        />
-        <Route path="/login" element={currentUser ? <Homepage /> : <Login />} />
-        <Route path="/post/:id" element={<Single />} />
-        <Route path="/write" element={currentUser ? <Write /> : <Login />} />
-        <Route
-          path="/settings"
-          element={currentUser ? <Settings /> : <Login />}
-        />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <div>
+        <Header />
+        <SearchBar />
+        <div className="app-container">
+          {/* MenuBar always remains visible */}
+          <div className="menu-bar-container">
+            <MenuBar />
+          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Signup" element={<SignUp />} />
+            <Route path="/logIn" element={<LogIn />} />
+            <Route path="SearchBar" element={<SearchBar />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/posts" element={<Post />} />
+            <Route path="/post" element={<PostDetails />} />{" "}
+          </Routes>
+        </div>
+        {/* <Footer /> */}
+      </div>
+    </AuthProvider>
   );
 }
-
-export default App;
