@@ -1,5 +1,5 @@
 ## Forensic_lingusitics journal
-#Table of Contents
+# Table of Contents
 1.Introduction
 2.Technologies Used
 3.Installation Guide
@@ -13,10 +13,10 @@
 11.License
 12.Conclusion
 
-##1. Introduction
+## 1. Introduction
 This project serves as a journal for forensic linguists, providing resources, updates,events, case studies, details about the field , top universities, case studies, ethical issues and consultation service, genres of crimes, and learning materials all is related to legal professions. The application is designed to be user-friendly and accessible, incorporating various interactive elements to enhance user experience.
 
-##2. Technologies Used
+## 2. Technologies Used
 Frontend Technologies:
 HTML, CSS, React.js
 Routing:
@@ -26,7 +26,7 @@ json-server for a mock API to manage data.
 Styling:
 Google Fonts for typography.
 Font Awesome for icons.
-#npm install --save @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+# npm install --save @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
 EX:
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 <FontAwesomeIcon icon={faCoffee} />
@@ -34,7 +34,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 State Management:
 React hooks (useState, useEffect) for managing component states.
 
-##3. Installation Guide
+## 3. Installation Guide
 Prerequisites
 Node.js (version v18.20.4) installed on your machine.
 npm (Node Package Manager) for managing dependencies.
@@ -61,7 +61,7 @@ npm (Node Package Manager) for managing dependencies.
       "react-app",
       "react-app/jest"
     ]
-#Steps to Install
+# Steps to Install
 Clone the Repository:
 bash
 Copy code
@@ -83,7 +83,7 @@ bash
 Copy code
 npm start
 Access the Application: Open your browser and navigate to http://localhost:3000 (incase it's without deployment).
-##4. Project Structure
+## 4. Project Structure
 The project follows a modular structure to facilitate maintainability:
 puplic/: index.html
 src/: Contains all source files.
@@ -96,7 +96,7 @@ components/: Reusable components like Header, Footer, and Slider.
 pages/: Contains the main pages such as Home, header, about,......
 hooks/: Custom hooks for reusable logic.
 assets/: Stores images, styles, and other static assets.
-##5. Routing Configuration
+## 5. Routing Configuration
 Router Setup
 The application utilizes BrowserRouter from React Router for navigation.
 
@@ -104,7 +104,7 @@ Key Routes:
 /: Home Page
 and many more.............
 
-##Example Route Configuration
+## Example Route Configuration
 javascript
 Copy code
 import React from "react";
@@ -160,13 +160,13 @@ export default function App() {
   );
 }
 
-##6. API Integration
+## 6. API Integration
 The project uses json-server to create a mock API for data management.
 
 db.json Structure >>>> for dash board and research bar and server has to be activated by writing on terminal:
-#npm run server
+# npm run server
 or
-#npm run api
+# npm run api
 json
 Copy code
 {
@@ -253,18 +253,18 @@ A simple login form can be implemented, storing user credentials in cookies upon
 }
 
 
-##8. Features
+## 8. Features
 Dynamic Navigation: Toggle navigation using state hooks.
 Responsive Design: Ensures compatibility across various devices.
 Interactive UI: Utilizes Font Awesome icons for enhanced visuals.
 Journal Entries: Users can view and manage journal entries dynamically.
 
-##9. Usage Instructions
+## 9. Usage Instructions
 Navigating the App
 Home Page: Overview and introduction to the journal.
 consultation page : Form for user inquiries and feedback.
 
-##10. Contributing
+## 10. Contributing
 Guidelines for Contributions
 Fork the repository and create a new branch for your feature.
 Ensure your code follows the project's style and standards.
