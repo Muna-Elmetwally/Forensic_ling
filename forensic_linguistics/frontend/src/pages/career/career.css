@@ -1,0 +1,79 @@
+.career-container {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.career-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.career-list {
+  list-style: none;
+  padding: 0;
+}
+
+.career-item {
+  background: white;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.career-title {
+  padding: 15px;
+  cursor: pointer;
+  margin: 0;
+  background-color: #6ee2f5;
+  color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.career-title:hover {
+  background-color: #5cc4e5;
+}
+
+.career-content {
+  padding: 15px;
+  margin: 0;
+  background-color: #f9f9f9;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.career-content.open {
+  max-height: 200px; /* Adjust as needed */
+  opacity: 1;
+}
+
+.career-content.closed {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.career-checkbox {
+  display: none; /* Hide the checkbox */
+}
+
+/* Add an icon for open/close (optional) */
+.career-title::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.career-checkbox:checked + .career-title::after {
+  transform: rotate(45deg);
+}
