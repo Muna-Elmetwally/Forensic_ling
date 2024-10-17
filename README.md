@@ -272,8 +272,8 @@ Submit a pull request with a description of your changes.
 Issue Tracking
 Report any bugs or feature requests through the GitHub Issues page.
 
-11. License
+## 11. License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-12. Conclusion
+## 12. Conclusion
 This documentation outlines the essential aspects of the Forensic Linguistics Journal project. Feel free to reach out with any questions or for further assistance.
