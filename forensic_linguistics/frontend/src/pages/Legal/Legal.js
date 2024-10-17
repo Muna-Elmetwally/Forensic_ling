@@ -1,4 +1,3 @@
-// Legal.js
 import React from "react";
 import "./legal.css";
 

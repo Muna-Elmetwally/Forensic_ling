@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-import NavMenu from "../pages/NavMenu";
+import NavMenu from "../../pages/MENU/NavMenu";
 import { Link } from "react-router-dom";
 
 export default function App() {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./singlePost/singlePost.css";
+import "./singlePost.css";
 import React from "react";
 
 export default function PostDetails() {

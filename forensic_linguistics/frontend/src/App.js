@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import SignUp from "./pages/Sign_up";
-import LogIn from "./pages/Log_in";
-import Home from "./pages/Home";
+import Header from "./components/Header/Header";
+import SignUp from "./pages/SIGNUP/Sign_up";
+import LogIn from "./pages/LOGIN/Log_in";
+import Home from "./pages/Home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
 import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
-import SearchBar from "./components/SearchBar";
-import About from "./pages/About";
-import MenuBar from "./pages/NavMenu";
-import PostDetails from "./pages/PostDetails"; // The new PostDetails component
+import SearchBar from "./components/Search/SearchBar";
+import About from "./pages/About/About";
+import MenuBar from "./pages/MENU/NavMenu";
+import PostDetails from "./pages/singlePost/PostDetails"; // The new PostDetails component
 import Post from "./pages/post/Post";
 import Services from "./pages/services/Services"; // Import your Services component
 import Career from "./pages/career/Career";
@@ -46,7 +46,6 @@ export default function App() {
             <Route path="/Legal" element={<Legal />} />
           </Routes>
         </div>
-        {/* <Footer /> */}
       </div>
     </AuthProvider>
   );

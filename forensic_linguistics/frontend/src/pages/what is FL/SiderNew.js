@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "./techniques.css";
-import slideImage from "../../assets/l2.jpg";
+import "./sliderNew.css";
 
-const Slider = () => {
+const SliderNew = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: slideImage,
+      image: require("../../assets/legal 1.jpg"),
       caption: "This is Slide 1",
     },
     {
@@ -34,26 +33,26 @@ const Slider = () => {
   }, [nextSlide]);
 
   return (
-    <div className="slider">
+    <div className="new-slider">
       <div
-        className="slider__content"
+        className="new-slider-content"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div className="slide" key={index}>
+          <div className="new-slide" key={index}>
             <img src={slide.image} alt={slide.caption} />
-            <div className="caption">{slide.caption}</div>
+            <div className="new-caption">{slide.caption}</div>
           </div>
         ))}
       </div>
-      <button className="prev" onClick={prevSlide}>
+      <button className="new-prev" onClick={prevSlide}>
         &#10094;
       </button>
-      <button className="next" onClick={nextSlide}>
+      <button className="new-next" onClick={nextSlide}>
         &#10095;
       </button>
     </div>
   );
 };
 
-export default Slider;
+export default SliderNew;

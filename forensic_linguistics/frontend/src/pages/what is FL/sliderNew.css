@@ -1,32 +1,32 @@
-.slider {
+.new-slider {
   position: relative;
-  width: 100%; /* Full width of the container */
+  width: 100%;
   max-width: 1200px; /* Maximum width for the slider */
   margin: 50px auto; /* Center the slider horizontally */
-  overflow: hidden;
-  border: 2px solid #ddd;
+  overflow: hidden; /* Prevent content overflow */
+  border: 2px solid #ddd; /* Optional: add a border */
 }
 
-.slider__content {
+.new-slider-content {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-.slide {
+.new-slide {
   min-width: 100%; /* Each slide takes full width */
   box-sizing: border-box;
   position: relative; /* Ensure positioning context for children */
 }
 
-.slide img {
+.new-slide img {
   width: 100%; /* Image should cover the entire slide */
   height: auto; /* Maintain aspect ratio */
   max-height: 600px; /* Limit maximum height to avoid excessive size */
 }
 
-.slider caption {
+.new-caption {
   position: absolute;
-  bottom: 50px;
+  bottom: 50px; /* Adjusted to match the original style */
   left: 50px;
   font-size: 24px;
   color: white;
@@ -36,7 +36,8 @@
   z-index: 10; /* Ensure caption is above image */
 }
 
-.slider button {
+.new-prev,
+.new-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -49,15 +50,16 @@
   z-index: 10; /* Ensure buttons are above images */
 }
 
-.slider button.prev {
+.new-prev {
   left: 10px;
 }
 
-.slider button.next {
+.new-next {
   right: 10px;
 }
 
 /* Optional: Add some hover effects */
-.slider button:hover {
+.new-prev:hover,
+.new-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
