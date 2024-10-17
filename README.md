@@ -1,4 +1,4 @@
-## Forensic_lingusitics journal
+## Name of the project: Forensic Linguistics Journal: Bridging Law and Language
 # Table of Contents
 1.Introduction
 2.Technologies Used
