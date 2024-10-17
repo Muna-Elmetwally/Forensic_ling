@@ -140,7 +140,7 @@ const MenuBar = () => {
               What do Forensic Linguists do?
             </Link>
           </li>
-          <li>
+          {/*  <li>
             <Link to="/Issues" className="menu-link">
               Legal & Ethical Issues
             </Link>
@@ -149,17 +149,21 @@ const MenuBar = () => {
             <Link to="/Community" className="menu-link">
               Forum & Community
             </Link>
-            <ul className="dropdownn">
-              <li>
-                <Link to="/case-studies/Events" className="dropdownn-link">
-                  Discussions & Events
-                </Link>
-              </li>
-            </ul>
           </li>
+          <li className="dropdownn">
+            <Link to="/case-studies/Events" className="dropdownn-link">
+              Discussions & Events
+            </Link>
+          </li>
+
           <li>
             <Link to="/Services" className="menu-link">
               Services & Consultation
+            </Link>
+          </li> */}
+          <li>
+            <Link to="/Dashboard" className="menu-link">
+              Dashboard
             </Link>
           </li>
         </ul>

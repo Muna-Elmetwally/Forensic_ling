@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": "2e94"
+    },
+    {
+      "id": "aa0d",
+      "email": "jkjmh",
+      "password": "kujbkhk"
+    },
+    {
+      "id": "137d",
+      "email": "moneyahmed222@gmail.com",
+      "password": "123654789"
+    }
+  ],
+  "search": [
+    {
+      "id": "1",
+      "name": "Forensic Linguistics Overview"
+    },
+    {
+      "id": "2",
+      "name": "Phonetics and Linguistics"
+    }
+  ]
+}

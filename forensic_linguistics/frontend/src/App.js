@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import SignUp from "./pages/Sign_up";
 import LogIn from "./pages/Log_in";
 import Home from "./pages/Home";
-import Dashboard from "./pages/dashboard/Dashboard"; // Import the Dashboard component
+import Dashboard from "./pages/dashboard/Dashboard";
 import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
 import SearchBar from "./components/SearchBar";
 import About from "./pages/About";
