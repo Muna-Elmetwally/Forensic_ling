@@ -31,9 +31,7 @@ const MenuBar = () => {
             </Link>
           </li>
           <li className="dropdown-containerr">
-            <Link to="/caseStudies" className="menu-link">
-              Case Studies
-            </Link>
+            Case Studies
             <ul className="dropdownn">
               <li>
                 <Link to="/caseStudies/Famous" className="dropdownn-link">
