@@ -1,28 +1,46 @@
-/* sign-up form*/
 /* Parent Container Styling */
 .logIn-parent {
-  flex: 1; /* Take up remaining space between header and footer */
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(
-    51,
-    65,
-    85,
-    0.7
-  ); /* Darker, professional tones with transparency */
+  background-image: url("../../assets/l3.jpg "); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  position: relative; /* Needed for the overlay */
+}
+
+/* Semi-transparent Overlay */
+.logIn-parent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+  z-index: -1; /* Ensure it stays behind the form */
 }
 
 /* Register Form Container Styling */
 .register {
-  background: #f8fafc; /* Light background for contrast */
-  padding: 2rem; /* Reduced padding for smaller devices */
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  background: rgba(
+    248,
+    250,
+    252,
+    0.9
+  ); /* Light background with slight transparency */
+  padding: 2rem;
+  border-radius: 12px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
   max-width: 400px;
   width: 100%;
   text-align: center;
-  text-decoration: none;
+  backdrop-filter: blur(10px); /* Apply blur to make the form stand out */
+  z-index: 1; /* Ensure it's above the background and overlay */
 }
 
 /* General Input Styling */
@@ -34,12 +52,12 @@ input {
   border-radius: 4px;
   font-size: 1rem;
   background: #e2e8f0;
-  transition: border 0.3s ease;
+  transition: border 0.3s ease, background 0.3s ease;
 }
 
 /* Input Focus Styling */
 input:focus {
-  border: 1px solid #0f172a; /* Darker focus border */
+  border: 1px solid #0f172a;
   outline: none;
   background: #fff;
 }
@@ -47,20 +65,20 @@ input:focus {
 /* Form Labels */
 label {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 10px 0 5px;
-  color: #1e293b; /* Dark gray for text */
+  color: #1e293b;
   font-weight: bold;
   text-align: left;
 }
 
 /* Button Styling */
 #button {
-  background-color: #0f172a; /* Dark blue */
+  background-color: #0f172a;
   color: white;
   padding: 12px 30px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -73,27 +91,27 @@ label {
   background-color: #334155;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .register {
-    padding: 1.5rem; /* Increased padding for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .register {
-    padding: 1rem; /* Reduced padding for extra small screens */
-  }
-
-  input {
-    font-size: 0.9rem; /* Smaller font size for inputs */
-  }
-}
-
 /* Error Message Styling */
 .error {
   color: red;
   font-size: 0.9rem;
   text-align: left;
   margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register {
+    padding: 1rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
 }

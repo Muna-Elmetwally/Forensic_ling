@@ -10,6 +10,14 @@ const MenuBar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="menu-bar-containerr">
       <button onClick={toggleMenu} className="menu-button">
@@ -82,29 +90,43 @@ const MenuBar = () => {
             </ul>
           </li>
           <li className="dropdown-containerr">
-            <Link to="/Blogs" className="menu-link">
-              Expert Interviews & Blogs
-            </Link>
+            Expert Interviews & Blogs
             <ul className="dropdownn">
               <li>
-                <Link to="/Blogs/Interviews" className="dropdownn-link">
+                <a
+                  href="#sidebar"
+                  onClick={(e) => handleScroll(e, "sidebar")}
+                  className="dropdownn-link"
+                >
                   Interviews
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/Blogs/Blogs" className="dropdownn-link">
+                <a
+                  href="#posts"
+                  onClick={(e) => handleScroll(e, "posts")}
+                  className="dropdownn-link"
+                >
                   Blogs
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/Blogs/Podcasts" className="dropdownn-link">
+                <a
+                  href="#posts"
+                  onClick={(e) => handleScroll(e, "posts")}
+                  className="dropdownn-link"
+                >
                   Podcasts
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/Blogs/Documentries" className="dropdownn-link">
-                  Documentaries
-                </Link>
+                <a
+                  href="#posts"
+                  onClick={(e) => handleScroll(e, "posts")}
+                  className="dropdownn-link"
+                >
+                  Documentries
+                </a>
               </li>
             </ul>
           </li>

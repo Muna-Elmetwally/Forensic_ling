@@ -29,25 +29,61 @@ const CareerItem = ({ title, content }) => {
 const Career = () => {
   const items = [
     {
-      title: "Languages Used",
-      content:
-        "This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax complements that of SASS. Regardless, this could all be done in plain HTML and CSS.",
+      title: "Analyzing and Authenticating Spoken and Written Evidence",
+      content: `
+        Forensic linguists are crucial in analyzing both written and spoken evidence 
+        to determine authorship, linguistic patterns, and authenticity. They break down 
+        texts to study syntax, grammar, word choice, and stylistic elements, engaging in 
+        a process known as "linguistic fingerprinting." By analyzing specific language 
+        markers like sentence structure, punctuation, and spelling, linguists can often 
+        identify or disprove authorship.
+
+        When dealing with spoken evidence, forensic linguists focus on voice analysis, 
+        studying accents, dialects, and speech patterns to authenticate voices. This is 
+        crucial in cases involving phone threats, wiretaps, or disputed recordings, where 
+        the authenticity of the speaker’s identity may play a pivotal role.
+
+        The precision and depth of these analyses often influence legal outcomes by 
+        narrowing down suspects, validating testimonies, and revealing inconsistencies in 
+        the linguistic traits present in the evidence.
+      `,
     },
     {
-      title: "How it Works",
-      content:
-        "Using the sibling and checked selectors, we can determine the styling of sibling elements based on the checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML accordion element. Media queries are used to make the element responsive to different screen sizes.",
+      title: "Assisting in the Interpretation of Legal Language",
+      content: `
+        Legal language can be complex and ambiguous. Forensic linguists help clarify 
+        the meaning of legal documents such as contracts, statutes, and laws. In civil 
+        cases or legal disputes, they ensure that the intent behind legal text is clearly 
+        understood by all parties involved.
+
+        Beyond clarification, forensic linguists simplify legal language for the general 
+        public. For instance, they make jury instructions or legal agreements more 
+        accessible, ensuring that non-legal professionals can comprehend them without 
+        misunderstanding. Their work is especially significant for non-native speakers or 
+        individuals with limited language comprehension, reducing the risk of legal 
+        misunderstandings and ensuring fair trials.
+      `,
     },
     {
-      title: "Points of Interest",
-      content:
-        "By making the open state default for when :checked isn't detected, we can make this system accessible for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the 'checked' property of the input element.",
+      title: "Analyzing Discourse in Courtroom Interactions",
+      content: `
+        In the courtroom, forensic linguists analyze language dynamics, focusing on how 
+        questions are framed and how interactions between judges, attorneys, witnesses, 
+        and defendants influence trial outcomes. They examine discourse features like 
+        politeness strategies, power dynamics, and leading questions to assess whether 
+        communication is fair and unbiased.
+
+        Forensic linguists also assess how language is used during interrogations, 
+        ensuring that questions aren’t coercive and that witnesses aren’t misled into 
+        giving inaccurate testimony. By evaluating these language exchanges, they help 
+        ensure justice by highlighting how discourse influences a trial’s proceedings.
+      `,
     },
   ];
 
   return (
     <div className="career-container">
-      <h1 className="career-header">CSS + HTML only Accordion Element</h1>
+      <h1 className="career-header">What Do Forensic Linguists Do?</h1>
       <ul className="career-list">
         {items.map((item, index) => (
           <CareerItem key={index} title={item.title} content={item.content} />

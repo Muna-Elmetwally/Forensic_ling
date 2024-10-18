@@ -6,20 +6,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Lora", serif;
-  color: #444;
+  color: #0a4e70;
+  font-family: "Rajdhani", sans-serif;
+  animation: waveMotion 3s infinite ease-in-out;
+}
+
+@keyframes waveMotion {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust for wave height */
+  }
+}
+.AboutTitles:hover {
+  color: #3084ae;
 }
 
 .AboutTitleSm {
   position: absolute;
-  top: 18%;
-  font-size: 20px;
+  top: 14%;
+  font-size: 30px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
 }
 
 .AboutTitleLg {
   position: absolute;
-  top: 20%;
+  top: 18%;
   font-size: 100px;
+  font-family: "Rajdhani", sans-serif;
+  margin-top: 8px;
 }
 
 .AboutImg {
@@ -29,24 +47,3 @@
   object-fit: cover;
   object-position: top;
 }
-/* .about-paragraph {
-  font-family: "Arial", sans-serif; 
-  font-size: 18px; 
-  line-height: 1.6;
-  color: #333;
-  margin: 20px 0; 
-  padding: 20px; 
-  background-color: #f9f9f9; 
-  border-left: 4px solid #0a4e70; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
-  transition: background-color 0.3s ease; 
-  max-width: 800px;
-  margin-left: auto; 
-  margin-right: auto; 
-}
-
-
-.about-paragraph:hover {
-  background-color: #eef5f9;
-} */

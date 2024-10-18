@@ -1,21 +1,54 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./Dashboard.css";
+import Cookies from "js-cookie";
 
 const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
+
   // Fetch users from the mock API on component mount
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch("http://localhost:5000/users");
-      const data = await response.json();
-      setUsers(data);
+      try {
+        const response = await axios.get("http://localhost:5000/users");
+        setUsers(response.data);
+
+        // Check if the current user exists
+        const loggedInEmail = Cookies.get("userEmail");
+        const userExists = response.data.some(
+          (user) => user.email === loggedInEmail
+        );
+
+        if (userExists) {
+          setIsAuthenticated(true);
+        } else {
+          alert("Access denied. You are not authorized to view this page.");
+          setTimeout(() => {
+            navigate("/"); // Redirect to login or another page after showing the error
+          }, 3000); // Redirect after 3 seconds
+        }
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
     };
     fetchUsers();
-  }, []);
+  }, [navigate]);
+
+  // // Fetch users from the mock API on component mount
+  // useEffect(() => {
+  //   const fetchUsers = async () => {
+  //     const response = await fetch("http://localhost:5000/users");
+  //     const data = await response.json();
+  //     setUsers(data);
+  //   };
+  //   fetchUsers();
+  // }, []);
 
   const addUser = async () => {
     if (email && password) {
@@ -48,6 +81,9 @@ const Dashboard = () => {
     setUsers(users.filter((user) => user.id !== id));
   };
 
+  if (!isAuthenticated) {
+    return <p className="error-message">Redirecting...</p>; // Show loading or redirecting message
+  }
   return (
     <div className="dashboard-container">
       <div className="sidebar">

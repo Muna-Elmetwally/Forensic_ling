@@ -1,7 +1,7 @@
 /* Global Styles */
 * {
   box-sizing: border-box; /* Ensure padding and borders are included in total width/height */
-  margin: 0px; /* Reset default margins */
+  margin: 0; /* Reset default margins */
   padding: 0; /* Reset default padding */
 }
 
@@ -102,7 +102,7 @@ header {
 header::before {
   content: ""; /* Required for pseudo-element */
   position: absolute; /* Position it over the header */
-  border-radius: 5px; /* border radius for smooth edges */
+  border-radius: 5px; /* Add border radius for smooth edges */
   top: 0;
   left: 0;
   right: 0;

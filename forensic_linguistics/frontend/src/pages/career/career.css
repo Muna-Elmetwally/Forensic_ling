@@ -28,14 +28,14 @@
   padding: 15px;
   cursor: pointer;
   margin: 0;
-  background-color: #6ee2f5;
+  background-color: #0a4e70;
   color: #fff;
   border-bottom: 1px solid #e0e0e0;
   position: relative;
 }
 
 .career-title:hover {
-  background-color: #5cc4e5;
+  background-color: #1d7d9a;
 }
 
 .career-content {

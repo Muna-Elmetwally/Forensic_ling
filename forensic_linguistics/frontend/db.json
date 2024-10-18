@@ -38,5 +38,43 @@
       "id": "2",
       "name": "Phonetics and Linguistics"
     }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Discourse Analysis",
+      "description": "Forensic discourse analysis is a field of forensic linguistics that deals with the study of language used in legal and investigative contexts. It involves the examination of written and spoken language to uncover hidden meanings, reveal intent, and assess credibility.",
+      "img": "https://www.selectedreads.com/wp-content/uploads/2024/02/2-22-1024x535.png"
+    },
+    {
+      "id": 2,
+      "title": "Sexual Crimes",
+      "description": "Child sexual offenders convene in dark web spaces to exchange indecent imagery, advice and support. In response, law enforcement agencies deploy undercover agents to pose as offenders online to gather intelligence on these offending communities. Currently, however, little is known about how offenders interact online, which raises significant questions around how undercover officers should ‘authentically’ portray the persona of a child sexual offender. ",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLecqUik5s9tE6GsbSjwCXSAYlP4zCiv116Q&s"
+    },
+    {
+      "id": 3,
+      "title": "Hate Speech",
+      "description": "Hate speech calls out real or perceived “identity factors” of an individual or a group, including: “religion, ethnicity, nationality, race, colour, descent, gender,” but also characteristics such as language, economic or social origin, disability, health status, or sexual orientation, among many others.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYCnI6FD7SOa4BKQkJjs9H-HbRhfmD5XyAlw&s"
+    },
+    {
+      "id": 4,
+      "title": "Terrorism",
+      "description": "Linguistic terrorism is the distinction of some methods of using language as harmful. In the opinion of some theorists, different accents or other aspects of language should all be considered equal. Therefore, judging some as worse than others would be a linguistic terrorism.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjPs5AJUPScx99tnubRxmxfreSZ5vV96Pa0Q&s"
+    },
+    {
+      "id": 5,
+      "title": "Deception Detection",
+      "description": "Linguistic Deception Detection DD is a well-established part of forensic linguistics and an area that continues to attract attention on the part of researchers, self-styled experts, and the public at large. In this article, the various approaches to DD within the general field of linguistics are examined. The basic method is to treat language as a form of behaviour and to equate marked linguistic behaviour with other marked forms of behaviour .",
+      "img": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt3d45d7cf7e7a0929/64f0d2f2c850ca450419c83d/1.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale"
+    },
+    {
+      "id": 6,
+      "title": "AI in Forensic Linguistics",
+      "description": "This chapter presents the emerging connect between artificial intelligence (AI) and linguistics, primarily from the perspective of AI-based technology mediated evolution in the field of linguistics and specifically from a forensic viewpoint of its implications. The chapter provides a comprehensive idea about linguistics, branches of linguistics, natural language processing (NLP) and the processes involved in integration of AI in linguistics. The contents lead to the discussion on how we think AI ought to impact the way linguists view their field in the first place in addition to providing up-to-date information on how AI can be useful in crime investigations in the forensic linguistics discipline. An explanation of why AI investigations in language developed independent of linguistics is given to augment the understanding in its proper context. The last part of this chapter attempts to conjecture the future applications of AI in linguistics based on recent trends of development in the field, taking stock of accelerated ontogenesis on technological front.",
+      "img": "https://elblog.pl/wp-content/uploads/2024/05/compressed_img-uE7YZ0VK5fu8B7DZamxGd7tG.png"
+    }
   ]
 }

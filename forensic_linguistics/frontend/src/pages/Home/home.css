@@ -1,8 +1,8 @@
 .home {
   display: flex;
-  /* flex-direction: column;*/
-  align-items: center; /*Ensure content is centered horizontally
- /* flex-direction: row;  Two sections side by side */
-  /* justify-content: space-between;  Space between the sections */
-  /*  align-items: flex-start; Align items to the top */
+  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }

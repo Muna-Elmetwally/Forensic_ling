@@ -9,6 +9,15 @@ import "../../style.css";
 
 export default function Header() {
   const { isAuthenticated, logOut } = useAuth();
+
+  const handleScroll = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="header">
       <div className="logo">
@@ -24,46 +33,79 @@ export default function Header() {
             </Link>
           </li>
           <li className="dropdown-container">
-            <Link className="header-link" to="/About">
+            <a
+              href="#about"
+              onClick={(e) => handleScroll(e, "about")}
+              className="header-link"
+            >
               About
-            </Link>
+            </a>
           </li>
           <li className="dropdown-container">
-            <Link className="header-link" to="/Techniques">
+            <a
+              className="header-link"
+              href="https://www.lsadc.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Forensic Techniques & Tools
-            </Link>
+            </a>
             <ul className="dropdown">
               <li>
-                <Link className="header-link" to="/case-studies/Techniques">
+                <a
+                  className="header-link"
+                  href="https://scholar.google.com.eg/scholar?q=Forensic+Linguistics+Techniques&hl=en&as_sdt=0&as_vis=1&oi=scholart"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Techniques
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className="header-link" to="/case-studies/Tools">
+                <a
+                  className="header-link"
+                  href="https://aliastechnology.com/alias-overview/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Tools
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className="header-link" to="/case-studies/Glossary">
+                <a
+                  className="header-link"
+                  href="https://scholar.google.com.eg/scholar?q=Forensic+Linguistics+Glossary&hl=en&as_sdt=0&as_vis=1&oi=scholart"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Glossary
-                </Link>
+                </a>
               </li>
             </ul>
           </li>
+
           <li className="dropdown-container">
             <Link className="header-link" to="/Blogs">
               Expert Interviews & Blogs
             </Link>
             <ul className="dropdown">
               <li>
-                <Link className="header-link" to="/case-studies/Interviews">
+                <a
+                  href="#sidebar"
+                  onClick={(e) => handleScroll(e, "sidebar")}
+                  className="header-link"
+                >
                   Interviews
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className="header-link" to="/case-studies/Blogs">
+                <a
+                  href="#posts"
+                  onClick={(e) => handleScroll(e, "posts")}
+                  className="header-link"
+                >
                   Blogs
-                </Link>
+                </a>
               </li>
             </ul>
           </li>
@@ -78,9 +120,13 @@ export default function Header() {
             </Link>
             <ul className="dropdown">
               <li>
-                <Link className="header-link" to="/case-studies/Events">
+                <a
+                  href="#sidebar"
+                  onClick={(e) => handleScroll(e, "sidebar")}
+                  className="header-link"
+                >
                   Discussions & Events
-                </Link>
+                </a>
               </li>
             </ul>
           </li>

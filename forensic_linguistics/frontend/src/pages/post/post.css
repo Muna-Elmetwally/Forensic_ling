@@ -1,8 +1,11 @@
 .post {
-  width: 385px;
+  /* width: 385px;
   margin: 0px 25px 40px 25px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
+  flex: 1 1 30%; /* Example width; adjust as necessary */
+  margin: 10px; /* Adds space around each post */
+  background-color: cream;
 }
 
 .postImg {
@@ -10,6 +13,7 @@
   height: 280px;
   object-fit: cover;
   border-radius: 7px;
+  padding: 0;
 }
 
 .postInfo {
@@ -19,7 +23,7 @@
 }
 
 .postCat {
-  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 400;
   font-size: 11px;
   color: #be9656;
@@ -30,11 +34,17 @@
 }
 
 .postTitle {
-  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-size: 24px;
   font-weight: 900;
   margin-top: 15px;
   cursor: pointer;
+  color: #003d73;
+  text-decoration: none;
+  color: inherit;
+}
+.link {
+  text-decoration: none;
 }
 
 .postDate {
@@ -47,7 +57,7 @@
 }
 
 .postDesc {
-  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;

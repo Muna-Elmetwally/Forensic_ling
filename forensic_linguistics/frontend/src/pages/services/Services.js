@@ -63,17 +63,22 @@ const Services = () => {
 
   return (
     <div className="services-container">
-      <h1 className="services-heading">Focus on what's important</h1>
+      <h1 className="services-heading">
+        Linguistic Expertise in Legal Investigations & Courtroom Case
+      </h1>
       <p className="services-subheading">
-        Let's talk about improving your tax submissions
+        WE OFFER A LEGAL CONSULTATION, JUST FILL THE FORM and WE WILL CONTACT
+        YOU
       </p>
       <p className="services-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit
-        nisi, adipisci quod ad, quasi quia alias dolore sint dolorem facilis
-        quibusdam mollitia iure atque nemo, at ab sit explicabo. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Laborum impedit nisi,
-        adipisci quod ad, quasi quia alias dolore sint dolorem facilis quibusdam
-        mollitia iure atque nemo, at ab sit explicabo.
+        Our forensic linguistics consultation service offers specialized
+        linguistic expertise to assist legal professionals in understanding and
+        analyzing language-related evidence. With a deep knowledge of
+        linguistics and its application in legal contexts, we provide valuable
+        insights for cases involving both written and spoken communication.
+        Whether you are a lawyer, investigator, or part of a legal team, our
+        services can enhance your case strategy and strengthen your
+        understanding of language evidence.
       </p>
 
       <form onSubmit={handleSubmit} className="services-form">
@@ -88,7 +93,7 @@ const Services = () => {
           required
         />
 
-        <label htmlFor="yourCompany">Your Company</label>
+        <label htmlFor="yourCompany">Career</label>
         <input
           className="services-input-field"
           type="text"
