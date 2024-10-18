@@ -27,7 +27,7 @@ input {
   border-radius: 5px;
 }
 
-button {
+.register button {
   width: 100%;
   padding: 10px;
   background-color: #4caf50;
@@ -37,11 +37,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.register button:hover {
   background-color: #45a049;
 }
 
-.error {
+error {
   color: red;
   font-size: 0.9rem;
 }

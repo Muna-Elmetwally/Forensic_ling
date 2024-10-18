@@ -1,32 +1,25 @@
-/* Legal.css */
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 .legal {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+  background-color: white; /* Set background color to white */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-main {
+/* Main content area */
+.legal main {
   flex: 1;
-  padding: 2rem;
+  padding: 3rem 4rem; /* Increased padding for more spacing */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem; /* Increased gap between elements */
 }
 
-.card {
+/* Card styling */
+.legal .card {
   background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem; /* Increased padding for better content spacing */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0; /* Initial opacity for fade-in effect */
   transform: translateY(20px); /* Start below */
@@ -40,42 +33,54 @@ main {
   }
 }
 
-.card:hover {
+.legal .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Increased shadow on hover */
 }
 
-h2 {
-  color: #007bff;
+/* Heading styling */
+.legal h2 {
+  color: #007bff; /* Blue color for headings */
   display: flex;
   align-items: center;
+  font-size: 2rem; /* Increased font size for better visibility */
+  margin-bottom: 1.5rem; /* Added bottom margin for spacing */
+  font-weight: 600; /* Medium weight for emphasis */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-h2 svg {
-  margin-right: 0.5rem; /* Space between the icon and text */
+.legal h2 svg {
+  margin-right: 0.7rem; /* Increased space between the icon and text */
 }
 
-footer {
-  background-color: #333;
+/* Footer styling */
+.legal footer {
+  background-color: black;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem; /* Increased padding for better spacing */
   position: relative;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Shadow above footer */
 }
 
-footer p {
+.legal footer p {
   margin: 0;
+  font-size: 1rem; /* Adjusted font size for readability */
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  main {
-    padding: 1rem;
+  .legal main {
+    padding: 2rem; /* Reduced padding for smaller screens */
   }
 
-  .card {
-    padding: 1rem;
+  .legal .card {
+    padding: 1.5rem; /* Adjusted padding for smaller screens */
+  }
+
+  .legal h2 {
+    font-size: 1.5rem; /* Smaller heading size on mobile */
   }
 }

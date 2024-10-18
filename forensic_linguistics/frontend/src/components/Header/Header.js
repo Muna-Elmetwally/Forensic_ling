@@ -85,9 +85,7 @@ export default function Header() {
           </li>
 
           <li className="dropdown-container">
-            <Link className="header-link" to="/Blogs">
-              Expert Interviews & Blogs
-            </Link>
+            Expert Interviews & Blogs
             <ul className="dropdown">
               <li>
                 <a
@@ -115,9 +113,7 @@ export default function Header() {
             </Link>
           </li>
           <li className="dropdown-container">
-            <Link className="header-link" to="/Community">
-              Forum & Community
-            </Link>
+            Forum & Community
             <ul className="dropdown">
               <li>
                 <a
