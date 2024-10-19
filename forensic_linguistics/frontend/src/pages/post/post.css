@@ -1,15 +1,15 @@
 .post {
-  /* width: 385px;
+  width: 385px;
   margin: 0px 25px 40px 25px;
   display: flex;
-  flex-direction: column; */
+  flex-direction: column;
   flex: 1 1 30%; /* Example width; adjust as necessary */
-  margin: 10px; /* Adds space around each post */
+  margin: 20px; /* Adds space around each post */
   background-color: cream;
 }
 
 .postImg {
-  width: 385px;
+  width: 480px;
   height: 280px;
   object-fit: cover;
   border-radius: 7px;
@@ -25,10 +25,10 @@
 .postCat {
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
-  font-size: 11px;
+  font-size: 14px;
   color: #be9656;
-  line-height: 19px;
-  margin-top: 15px;
+  line-height: 22px;
+  margin-top: 20px;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -50,7 +50,7 @@
 .postDate {
   font-family: "Lora", serif;
   font-style: italic;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   color: #999999;
   margin-top: 15px;

@@ -2,6 +2,7 @@
   flex: 3;
   height: fit-content;
   margin: 20px;
+  margin-left: 0;
   padding-bottom: 30px;
   background-color: #f4f4f4;
   border-radius: 10px;
@@ -43,6 +44,7 @@
 .sidebarList {
   list-style-type: none;
   margin-bottom: 30px;
+  margin-left: 25px;
 }
 
 .sidebarListItem {
@@ -70,7 +72,7 @@
   width: 100%;
   max-width: 300px;
   height: auto;
-  border-radius: 5px;
+  border-radius: px;
   margin-top: 10px;
 }
 .illustrationBox {

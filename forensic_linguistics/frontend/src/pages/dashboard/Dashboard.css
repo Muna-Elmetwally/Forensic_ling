@@ -1,6 +1,7 @@
 .dashboard-container {
   display: flex;
   height: 100vh;
+  font-family: "Arial", sans-serif; /* Change the font for better readability */
 }
 
 .sidebar {
@@ -8,6 +9,7 @@
   background-color: #2d333a;
   padding: 20px;
   color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
 }
 
 .sidebar h2 {
@@ -31,6 +33,7 @@
 
 .sidebar ul li a:hover {
   color: #fff;
+  font-weight: bold; /* Make the text bold on hover */
 }
 
 .content {
@@ -38,6 +41,7 @@
   padding: 20px;
   background-color: #f3f4f6;
   overflow-y: auto; /* Enable scrolling for content */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
 }
 
 .top-bar {
@@ -61,11 +65,12 @@
   background-color: #28a745;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for button animation */
 }
 
 .top-bar button:hover {
   background-color: #218838;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 /* User form styles */
@@ -80,6 +85,12 @@
   border-radius: 4px;
   border: 1px solid #ccc;
   width: 200px;
+  transition: border 0.3s; /* Transition for input border */
+}
+
+.user-form input:focus {
+  border-color: #6ee2f5; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
 }
 
 .user-form button {
@@ -89,11 +100,12 @@
   background-color: #28a745;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for button animation */
 }
 
 .user-form button:hover {
   background-color: #218838;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 /* Table styles */
@@ -101,6 +113,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow to the table */
 }
 
 .user-table th,
@@ -124,6 +137,7 @@
 
 .user-table tr:hover {
   background-color: #3b4252;
+  transition: background-color 0.2s; /* Smooth transition on hover */
 }
 
 .action-button {
@@ -133,11 +147,14 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for button animation */
 }
 
 .action-button:hover {
   background-color: #c82333;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
 }
+
 .error-message {
   color: red;
   margin-top: 10px;

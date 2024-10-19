@@ -51,32 +51,48 @@ export default function Sidebar() {
 
         {/* First Video */}
         <iframe
-          width="100%" // Adjust width as necessary
-          height="315" // Adjust height as necessary
-          src="https://www.youtube.com/embed/Rc1T2VG_uQI" // First video
-          title="YouTube video player"
+          className="sidebarVideo"
+          width="100%" // Adjust width
+          height="315" // Adjust height as
+          src="https://www.youtube.com/embed/rmO-imjxeqY?start=53" // First video
+          title="Authorship Analysis in Forensic Linguistics"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
         <p>
-          This video discusses different topics related to authorship analysis.
+          <strong>Author Interview:</strong> Alison May on Forensic Linguistics
+          <br />
+          Discusses different topics related to authorship analysis.
         </p>
 
         {/* Second Video */}
         <iframe
-          width="100%" // Adjust width as necessary
-          height="315" // Adjust height as necessary
+          className="sidebarVideo"
+          width="100%" // Adjust width
+          height="315" // Adjust height
           src="https://www.youtube.com/embed/yt24N1Awu9E" // Second video
-          title="YouTube video player"
+          title="Unabomber Criminal Case"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
         <p>
-          How do you catch a twisted genius who aspires to be the perfect
-          anonymous killer?
+          <strong>Unabomber Case: </strong>How do you catch a twisted genius who
+          aspires to be the perfect anonymous killer?
         </p>
+        {/* Third Video */}
+        <iframe
+          className="sidebarVideo"
+          width="100%" // Adjust width
+          height="315" // Adjust height
+          src="https://www.youtube.com/embed/-01uO3uTrgk" // Second video
+          title="Rob Leonard"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <p>Rob Leonard - The Groundbreaking Science of Forensic Linguistics</p>
       </div>
     </div>
   );

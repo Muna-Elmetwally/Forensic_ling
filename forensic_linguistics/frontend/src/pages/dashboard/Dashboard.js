@@ -40,16 +40,6 @@ const Dashboard = () => {
     fetchUsers();
   }, [navigate]);
 
-  // // Fetch users from the mock API on component mount
-  // useEffect(() => {
-  //   const fetchUsers = async () => {
-  //     const response = await fetch("http://localhost:5000/users");
-  //     const data = await response.json();
-  //     setUsers(data);
-  //   };
-  //   fetchUsers();
-  // }, []);
-
   const addUser = async () => {
     if (email && password) {
       const newUser = { email, password };
