@@ -5,7 +5,7 @@ const Services = () => {
   // State to manage form input values
   const [formData, setFormData] = useState({
     yourName: "",
-    yourCompany: "",
+    yourCareer: "",
     yourEmail: "",
     yourPhone: "",
     textArea: "",
@@ -54,7 +54,7 @@ const Services = () => {
     // Reset form fields after submission (optional)
     setFormData({
       yourName: "",
-      yourCompany: "",
+      yourCareer: "",
       yourEmail: "",
       yourPhone: "",
       textArea: "",
@@ -93,13 +93,13 @@ const Services = () => {
           required
         />
 
-        <label htmlFor="yourCompany">Career</label>
+        <label htmlFor="Career">Career</label>
         <input
           className="services-input-field"
           type="text"
-          name="yourCompany"
-          placeholder="Company Name"
-          value={formData.yourCompany}
+          name="Career"
+          placeholder="Career"
+          value={formData.yourCareer}
           onChange={handleChange}
           required
         />

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./singlePost.css";
 import React from "react";
 
@@ -8,8 +7,8 @@ export default function PostDetails() {
       <div className="singlePostWrapper">
         <img
           className="singlePostImg"
-          src={require("../../assets/compressed_img-uE7YZ0VK5fu8B7DZamxGd7tG.png")} // Use require to load the image
-          alt="" // Provide meaningful alt text
+          src={require("../../assets/compressed_img-uE7YZ0VK5fu8B7DZamxGd7tG.png")}
+          alt="forensics"
         />
         <h1 className="singlePostTitle">
           Forensic Linguistics
@@ -21,13 +20,8 @@ export default function PostDetails() {
         <div className="singlePostInfo">
           <span>
             Author:
-            <b className="singlePostAuthor">
-              <Link className="link" to="/posts?username=Safak">
-                Tom Grant
-              </Link>
-            </b>
+            <b className="singlePostAuthor">Tom Grant</b>
           </span>
-          <span>1 day ago</span>
         </div>
         <p className="singlePostDesc">
           Linguistic Deception Detection DD is a well-established part of

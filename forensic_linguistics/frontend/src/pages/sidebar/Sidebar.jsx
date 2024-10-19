@@ -22,6 +22,7 @@ export default function Sidebar() {
           details.
         </p>
       </div>
+
       <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
@@ -29,10 +30,11 @@ export default function Sidebar() {
           <li className="sidebarListItem">AI</li>
           <li className="sidebarListItem">political</li>
           <li className="sidebarListItem">historical</li>
-          <li className="sidebarListItem">sexual assualts</li>
+          <li className="sidebarListItem">sexual assaults</li>
           <li className="sidebarListItem">corpus analysis</li>
         </ul>
       </div>
+
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
@@ -43,51 +45,37 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Illustration Box Section */}
       {/* Video Section */}
       <div className="sidebarItem">
-        <span className="sidebarTitle">WATCH VIDEO</span>
-        <video className="sidebarVideo" controls>
-          <source
-            src="https://www.youtube.com/watch?v=Rc1T2VG_uQI"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+        <span className="sidebarTitle">WATCH HERE</span>
 
-      {/* Illustration Box Section */}
-      <div className="illustrationBox">
-        <h3 className="boxTitle">Explore More</h3>
-        <p className="boxContent">
-          Learn about the latest trends in forensic linguistics and how you can
-          contribute to this exciting field.
+        {/* First Video */}
+        <iframe
+          width="100%" // Adjust width as necessary
+          height="315" // Adjust height as necessary
+          src="https://www.youtube.com/embed/Rc1T2VG_uQI" // First video
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <p>
+          This video discusses different topics related to authorship analysis.
         </p>
-      </div>
 
-      <div className="sidebarItem">
-        <span className="sidebarTitle">WATCH VIDEO</span>
-        <video className="sidebarVideo" controls>
-          <a
-            href="https://youtu.be/yt24N1Awu9E?si=f5sNLl6bK9JkqpMg"
-            className="learnMoreLink"
-          >
-            Learn More
-          </a>
-          How do you catch a twisted genius who aspires to be the perfect,
-          anonymous killer—who builds untraceable bombs and delivers them to
-          random targets, who leaves false clues to throw off authorities, who
-          lives like a recluse in the mountains of Montana and tells no one of
-          his secret crimes?
-        </video>
-      </div>
-
-      {/* Illustration Box Section */}
-      <div className="illustrationBox">
-        <h3 className="boxTitle">Explore More</h3>
-        <p className="boxContent">
-          Learn about the latest trends in forensic linguistics and how you can
-          contribute to this exciting field.
+        {/* Second Video */}
+        <iframe
+          width="100%" // Adjust width as necessary
+          height="315" // Adjust height as necessary
+          src="https://www.youtube.com/embed/yt24N1Awu9E" // Second video
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <p>
+          How do you catch a twisted genius who aspires to be the perfect
+          anonymous killer?
         </p>
       </div>
     </div>

@@ -30,7 +30,7 @@ const MenuBar = () => {
               Home
             </Link>
           </li>
-          <li className="dropdown-containerr">
+          <li className="dropdown-containerr menu-link">
             Case Studies
             <ul className="dropdownn">
               <li>
@@ -60,34 +60,53 @@ const MenuBar = () => {
               </li>
             </ul>
           </li>
-          <li className="dropdown-containerr">
-            <Link to="/Tools" className="menu-link">
-              Forensic Techniques & Tools
-            </Link>
+          <li className="dropdown-containerr menu-link">
+            <span>Forensic Techniques & Tools</span>
             <ul className="dropdownn">
               <li>
-                <Link to="/Tools/Techniques" className="dropdownn-link">
+                <a
+                  href="https://www.lsadc.org/"
+                  className="dropdownn-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Techniques
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/Tools/Tools" className="dropdownn-link">
+                <a
+                  href="https://www.lsadc.org/"
+                  className="dropdownn-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Tools
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/Tools/Glossary" className="dropdownn-link">
+                <a
+                  href="https://www.lsadc.org/"
+                  className="dropdownn-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Glossary
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/Tools/Genre" className="dropdownn-link">
+                <a
+                  href="https://www.lsadc.org/"
+                  className="dropdownn-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Genre
-                </Link>
+                </a>
               </li>
             </ul>
           </li>
-          <li className="dropdown-containerr">
+
+          <li className="dropdown-containerr menu-link">
             Expert Interviews & Blogs
             <ul className="dropdownn">
               <li>
@@ -160,27 +179,7 @@ const MenuBar = () => {
               What do Forensic Linguists do?
             </Link>
           </li>
-          {/*  <li>
-            <Link to="/Issues" className="menu-link">
-              Legal & Ethical Issues
-            </Link>
-          </li>
-          <li className="dropdown-containerr">
-            <Link to="/Community" className="menu-link">
-              Forum & Community
-            </Link>
-          </li>
-          <li className="dropdownn">
-            <Link to="/case-studies/Events" className="dropdownn-link">
-              Discussions & Events
-            </Link>
-          </li>
 
-          <li>
-            <Link to="/Services" className="menu-link">
-              Services & Consultation
-            </Link>
-          </li> */}
           <li>
             <Link to="/Dashboard" className="menu-link">
               Dashboard

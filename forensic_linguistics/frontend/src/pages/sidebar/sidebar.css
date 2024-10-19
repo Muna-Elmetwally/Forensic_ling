@@ -64,6 +64,7 @@
 .sidebarIcon {
   font-size: 16px;
   margin-left: 10px;
+  cursor: pointer;
 }
 .sidebarVideo {
   width: 100%;

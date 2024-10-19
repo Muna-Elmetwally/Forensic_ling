@@ -16,7 +16,7 @@ export default function Post({ img, title, description }) {
           </Link>
         </span>
         <hr />
-        <span className="postDate">1 hour ago</span>
+        <span className="postDate">Check it out</span>
       </div>
       <p className="postDesc">{description}</p>
     </div>

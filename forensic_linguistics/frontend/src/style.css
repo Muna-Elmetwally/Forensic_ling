@@ -144,22 +144,22 @@ header {
   gap: 30px;
 }
 
-.header-link {
+.header .header-link {
   color: #faf6e9;
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
 }
 
-.header-link:hover {
+.header .header-link:hover {
   color: #002d4f;
 }
 
-.dropdown-container {
+.header .dropdown-container {
   position: relative;
 }
 
-.dropdown {
+.header .dropdown {
   display: none;
   position: absolute;
   background-color: #002d4f;
@@ -171,19 +171,19 @@ header {
   opacity: 80%;
 }
 
-.dropdown-container:hover .dropdown {
+.header .dropdown-container:hover .dropdown {
   display: block;
 }
 
-.dropdown li {
+.header .dropdown li {
   padding: 10px;
 }
 
-.dropdown li:hover {
+.header .dropdown li:hover {
   background-color: #f7f7f7;
 }
 
-.logo img {
+.header .logo img {
   height: 45px;
   width: 40px;
   padding: 5px;
