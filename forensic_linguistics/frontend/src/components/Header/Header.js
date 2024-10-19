@@ -112,6 +112,12 @@ export default function Header() {
               Legal & Ethical Issues
             </Link>
           </li>
+
+          <li>
+            <Link className="header-link" to="/Services">
+              Services & Consultation
+            </Link>
+          </li>
           <li className="dropdown-container">
             Forum & Community
             <ul className="dropdown">
@@ -125,11 +131,6 @@ export default function Header() {
                 </a>
               </li>
             </ul>
-          </li>
-          <li>
-            <Link className="header-link" to="/Services">
-              Services & Consultation
-            </Link>
           </li>
           <li>
             {isAuthenticated ? (
