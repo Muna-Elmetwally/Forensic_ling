@@ -1,5 +1,5 @@
 .legal {
-  background-color: white; /* Set background color to white */
+  background-color: white;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   font-size: 2rem; /* Increased font size for better visibility */
-  margin-bottom: 1.5rem; /* Added bottom margin for spacing */
+  margin-bottom: 1.5rem;
   font-weight: 600; /* Medium weight for emphasis */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }

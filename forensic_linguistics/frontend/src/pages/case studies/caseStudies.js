@@ -5,7 +5,7 @@ const slides = [
   {
     id: 1,
     image:
-      "https://s.hdnux.com/photos/01/21/73/07/21475779/10/ratio3x2_1920.jpg", // Unabomber
+      "https://s.hdnux.com/photos/01/21/73/07/21475779/10/ratio3x2_1920.jpg",
     title: "The Unabomber Case ",
     description:
       "Forensic linguistics played a crucial role in solving the case of Ted Kaczynski, the Unabomber, who sent a series of mail bombs over nearly two decades. By analyzing the language in his manifesto, experts identified distinctive linguistic patterns and vocabulary that ultimately led to his arrest.",
@@ -30,7 +30,7 @@ const slides = [
   {
     id: 2,
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT32TnVUXYx7tmPeCW7TU0_rF-4Fd6BMuDh1WRam4EyHCU-ITaf", // Zodiac Killer
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT32TnVUXYx7tmPeCW7TU0_rF-4Fd6BMuDh1WRam4EyHCU-ITaf",
     title: "The Zodiac Killer",
     description:
       "The Zodiac Killer, active in the late 1960s and early 1970s, sent taunting letters to newspapers that included ciphers and cryptograms. Despite extensive investigations, the killer has never been caught, and linguistic analysis of these letters continues to attract attention and debate.",
@@ -51,7 +51,7 @@ const slides = [
   {
     id: 3,
     image:
-      "https://i.dailymail.co.uk/1s/2019/01/04/18/8138772-0-image-a-54_1546628207666.jpg", // The Scream
+      "https://i.dailymail.co.uk/1s/2019/01/04/18/8138772-0-image-a-54_1546628207666.jpg",
     title: "The JonBenét Ramsey Case",
     description:
       "In 1996, six-year-old JonBenét Ramsey was found murdered in her home in Boulder, Colorado. A ransom note, found at the scene, was central to the investigation. Forensic linguistics experts were called in to analyze the note for stylistic elements, grammar, and word choices that might provide clues about the author. ",
@@ -72,7 +72,7 @@ const slides = [
   {
     id: 4,
     image:
-      "https://i.ytimg.com/vi/4VGPp57j2o4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCYzCV8-oGAUSMuxmWCVP1d44rYiA", // Lindbergh Kidnapping
+      "https://i.ytimg.com/vi/4VGPp57j2o4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCYzCV8-oGAUSMuxmWCVP1d44rYiA",
     title: "The Lindbergh Kidnapping",
     description:
       "The 1932 kidnapping of Charles Lindbergh Jr. led to a high-profile investigation where ransom notes were analyzed for linguistic clues. Forensic linguistics helped identify the author of the notes, leading to the conviction of Bruno Hauptmann.",
@@ -97,7 +97,7 @@ const slides = [
   {
     id: 5,
     image:
-      "https://turkiye.un.org/sites/default/files/styles/hero_header_2xl_1x/public/2023-11/gaza1nov.png?itok=qRfQk2gS", // RFK Assassination
+      "https://turkiye.un.org/sites/default/files/styles/hero_header_2xl_1x/public/2023-11/gaza1nov.png?itok=qRfQk2gS",
     title: "The Struggle Between Israelis and Palestinians",
     description:
       "How the struggle between Israelis and Palestinians is represented in the western news discourse through building a relationship between language and ideology. The study provides a picture of how Palestinians are depicted in the West. ",

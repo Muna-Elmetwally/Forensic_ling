@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/l3.jpg "); /* Add your background image */
+  background-image: url("../../assets/l3.jpg ");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

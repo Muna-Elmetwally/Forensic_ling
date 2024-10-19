@@ -17,7 +17,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Adjust for wave height */
+    transform: translateY(-10px); /* Adjusting for wave height */
   }
 }
 .AboutTitles:hover {
@@ -42,7 +42,7 @@
 
 .AboutImg {
   width: 110%; /* Increase width beyond the container */
-  height: 600px; /* Increase the height */
+  height: 600px;
   margin-top: 42px;
   object-fit: cover;
   object-position: top;

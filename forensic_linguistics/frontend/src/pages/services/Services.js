@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./services.css"; // Assuming your CSS is in Services.css
+import "./services.css";
 
 const Services = () => {
   // State to manage form input values
@@ -23,7 +23,7 @@ const Services = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Process the form data as needed (e.g., send to API)
+    // Process the form data as needed
     console.log("Form submitted:", formData);
 
     // Mock API call using fetch
@@ -51,7 +51,7 @@ const Services = () => {
       setSubmissionStatus("There was an error submitting your form.");
     }
 
-    // Reset form fields after submission (optional)
+    // Reset form fields after submission
     setFormData({
       yourName: "",
       yourCareer: "",

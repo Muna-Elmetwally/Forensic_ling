@@ -5,13 +5,13 @@ import SignUp from "./pages/SIGNUP/Sign_up";
 import LogIn from "./pages/LOGIN/Log_in";
 import Home from "./pages/Home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
-import { AuthProvider } from "./pages/AuthContext"; // Import the AuthProvider
+import { AuthProvider } from "./pages/AuthContext";
 import SearchBar from "./components/Search/SearchBar";
 import About from "./pages/About/About";
 import MenuBar from "./pages/MENU/NavMenu";
-import PostDetails from "./pages/singlePost/PostDetails"; // The new PostDetails component
+import PostDetails from "./pages/singlePost/PostDetails";
 import Post from "./pages/post/Post";
-import Services from "./pages/services/Services"; // Import your Services component
+import Services from "./pages/services/Services";
 import Career from "./pages/career/Career";
 import UniversityPage from "./pages/University/University";
 import Slides from "./pages/case studies/caseStudies";

@@ -74,7 +74,7 @@
 /* Links inside university card */
 .university-card a {
   position: relative;
-  z-index: 1; /* Ensure the links are on top */
+  z-index: 1; /*  the links are on top */
   color: cream; /* Primary link color */
   text-decoration: none; /* Remove underline */
 }
@@ -91,8 +91,8 @@
   border: none;
   padding: 14px 28px; /* Increased padding for size */
   font-size: 1.1rem; /* Slightly larger font size */
-  border-radius: 8px; /* More rounded corners */
-  cursor: pointer; /* Indicates clickable button */
+  border-radius: 8px; /*  rounded corners */
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: inline-block; /* Ensures inline with other elements */

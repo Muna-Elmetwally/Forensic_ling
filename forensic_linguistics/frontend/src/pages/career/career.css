@@ -46,7 +46,7 @@
 }
 
 .career-content.open {
-  max-height: 200px; /* Adjust as needed */
+  max-height: 200px;
   opacity: 1;
 }
 

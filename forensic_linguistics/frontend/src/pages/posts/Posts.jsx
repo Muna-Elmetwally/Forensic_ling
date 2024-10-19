@@ -10,7 +10,6 @@ export default function Posts() {
     axios
       .get("http://localhost:5000/posts") // Adjust path as necessary
       .then((response) => {
-        // console.log("Posts fetched successfully:", response.data);
         setPosts(response.data);
       })
       .catch((error) => {
