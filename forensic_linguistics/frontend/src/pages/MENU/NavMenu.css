@@ -57,6 +57,20 @@
   color: #0056b3; /* Color on hover */
 }
 
+/*case study----------------------------------*/
+.mmenu-link {
+  display: block; /* Block display for links */
+  padding-right: 12px;
+  color: #004b87; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+.mmenu-link:hover {
+  background-color: #e9ecef; /* Background on hover */
+  color: #0056b3; /* Color on hover */
+}
+/*----------------------------------------*/
 .dropdown-containerr {
   position: relative; /* Position for dropdown menu */
 }

@@ -1,77 +1,191 @@
-/* caseStudies.css */
-
-.case-studies {
+/* Full-screen case study container */
+.case-studies-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center content vertically */
   width: 100%;
-  height: 100vh; /* Full height for the governmental style */
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
   position: relative;
+  background-image: url("../../assets/legal1.jpg"); /* Path to your background image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
 }
 
-.slide {
-  display: none;
-  width: 100%;
+/* Slide container */
+.case-slide {
+  display: none; /* Hidden by default */
+  width: 90%; /* Adjusted width for responsive design */
+  max-width: 800px; /* Maximum width for the slide */
   height: 100%;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.3s; /* Smooth fade and slide effect */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow for contrast */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White background with transparency */
 }
 
-.slide.active {
-  display: flex;
+/* Active slide display */
+.case-slide.active-slide {
+  display: flex; /* Visible when active */
   opacity: 1;
+  transform: scale(1.05); /* Slight scale effect on active slide */
 }
 
-.slide-image {
-  width: 30%;
+/* Image in the slide */
+.case-slide-image {
+  width: 100%; /* Full width */
   height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Increase max height for better visibility */
+  object-fit: contain; /* Ensure the entire image is visible */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Shadow for images */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.slide-content {
-  width: 70%;
+/* Hover effect on the image to slightly scale it */
+.case-slide-image:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Content area in the slide */
+.case-slide-content {
+  width: 100%; /* Full width */
   padding: 20px;
-  background-color: #f8f9fa; /* Light background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+  border-radius: 0 0 12px 12px; /* Rounded corners for the bottom */
+  background-color: rgba(
+    247,
+    247,
+    247,
+    0.9
+  ); /* Light gray background with transparency */
 }
 
-.case-studies h2 {
-  color: #333; /* Darker title color */
+/* Title styles */
+.case-slide-title {
+  color: #222222; /* Darker title color */
+  margin-bottom: 10px;
+  font-size: 2em; /* Larger font size */
+  font-weight: bold; /* Bold title */
 }
 
-.keywords {
+/* Description styles */
+.case-slide-description {
   margin-top: 10px;
+  color: #444444; /* Dark gray for description */
+  font-size: 1em; /* Slightly larger font size */
+  line-height: 1.5;
+  max-height: 5em; /* Limit to max height for 5 lines */
+  overflow: hidden; /* Hide any overflow */
 }
 
-.keyword {
+/* Keyword styles */
+.case-keywords {
+  margin-top: 20px; /* Increased top margin for more space */
+  display: flex; /* Flex container for keywords */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: flex-start; /* Align keywords to the left */
+}
+
+/* Individual keyword styles */
+.case-keyword {
   display: inline-block;
-  margin: 0 5px;
-  padding: 5px 10px;
-  background-color: #007bff; /* Primary color */
-  color: #fff;
+  margin: 5px; /* Margin between individual keywords */
+  padding: 5px 12px;
+  background-color: #007bff; /* Button-like style */
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 20px; /* Rounded keyword pills */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
-.keyword:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+.case-keyword:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 
-.navigation {
-  margin-top: 20px;
+/* Adjust navigation button margins */
+.case-navigation {
+  margin-top: 20px; /* Space between keywords and navigation buttons */
+  display: flex; /* Flex container for buttons */
+  justify-content: flex-end; /* Align buttons to the right */
 }
 
-.nav-button {
+/* Positioning buttons to the right side of the keywords */
+.case-navigation-container {
+  display: flex; /* Create a flex container */
+  justify-content: space-between; /* Space between keywords and navigation */
+  align-items: center; /* Align items vertically center */
+  width: 100%; /* Full width to ensure proper spacing */
+}
+
+/* Navigation button styles */
+.case-nav-button {
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #0056b3; /* Darker blue for buttons */
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px; /* Fully rounded buttons */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  margin: 0 10px; /* Space between buttons */
 }
 
-.nav-button:hover {
-  background-color: #0056b3;
+.case-nav-button:hover {
+  background-color: #004494; /* Even darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive behavior for tablets and larger screens */
+@media (max-width: 768px) {
+  .case-slide-content {
+    width: 95%; /* Adjust content width for smaller screens */
+  }
+
+  .case-slide-image {
+    max-height: 200px; /* Adjust image height for smaller screens */
+  }
+
+  .case-slide-title {
+    font-size: 1.8em; /* Adjust font size */
+  }
+
+  .case-slide-description {
+    font-size: 1em; /* Adjust font size */
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 480px) {
+  .case-slide-content {
+    width: 95%; /* Maximize content width on very small screens */
+    padding: 15px; /* Reduce padding for small screens */
+  }
+
+  .case-slide-image {
+    max-height: 150px; /* Adjust image height for mobile */
+  }
+
+  .case-slide-title {
+    font-size: 1.5em; /* Further adjust font size */
+  }
+
+  .case-slide-description {
+    font-size: 0.9em; /* Adjust description font size for readability */
+  }
+
+  .case-nav-button {
+    padding: 8px 12px; /* Smaller buttons for mobile */
+    margin: 0 5px; /* Less space between buttons */
+  }
 }
