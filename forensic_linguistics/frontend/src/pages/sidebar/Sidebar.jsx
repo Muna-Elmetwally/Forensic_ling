@@ -52,8 +52,8 @@ export default function Sidebar() {
         {/* First Video */}
         <iframe
           className="sidebarVideo"
-          width="100%" // Adjust width
-          height="315" // Adjust height as
+          width="100%"
+          height="315"
           src="https://www.youtube.com/embed/rmO-imjxeqY?start=53" // First video
           title="Authorship Analysis in Forensic Linguistics"
           frameBorder="0"
@@ -69,8 +69,8 @@ export default function Sidebar() {
         {/* Second Video */}
         <iframe
           className="sidebarVideo"
-          width="100%" // Adjust width
-          height="315" // Adjust height
+          width="100%"
+          height="315"
           src="https://www.youtube.com/embed/yt24N1Awu9E" // Second video
           title="Unabomber Criminal Case"
           frameBorder="0"
@@ -84,9 +84,9 @@ export default function Sidebar() {
         {/* Third Video */}
         <iframe
           className="sidebarVideo"
-          width="100%" // Adjust width
-          height="315" // Adjust height
-          src="https://www.youtube.com/embed/-01uO3uTrgk" // Second video
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/-01uO3uTrgk" // third video
           title="Rob Leonard"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

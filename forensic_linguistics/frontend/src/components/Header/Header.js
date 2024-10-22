@@ -1,4 +1,3 @@
-// Header.js
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../pages/AuthContext";
@@ -12,7 +11,7 @@ export default function Header() {
 
   const handleScroll = (e, sectionId) => {
     e.preventDefault();
-    const section = document.getElementById(sectionId);
+    const section = document.getElementById(sectionId); // Get the target section by ID
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -34,8 +33,8 @@ export default function Header() {
           </li>
           <li className="dropdown-container">
             <a
-              href="#about"
-              onClick={(e) => handleScroll(e, "about")}
+              href="#about" // Internal link for smooth scrolling
+              onClick={(e) => handleScroll(e, "about")} // Call scroll handler
               className="header-link"
             >
               About
@@ -46,7 +45,7 @@ export default function Header() {
               className="header-link"
               href="https://www.lsadc.org/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" // Security best practice
             >
               Forensic Techniques & Tools
             </a>
@@ -133,7 +132,7 @@ export default function Header() {
             </ul>
           </li>
           <li>
-            {isAuthenticated ? (
+            {isAuthenticated ? ( // Conditional rendering based on authentication status
               <button className="logout-nav" onClick={logOut}>
                 Log Out <FontAwesomeIcon icon={faSignOutAlt} />
               </button>

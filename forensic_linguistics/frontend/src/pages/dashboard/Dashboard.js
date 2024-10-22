@@ -16,7 +16,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/users");
+        const response = await axios.get("http://localhost:5000/admins");
         setUsers(response.data);
 
         // Check if the current user exists
@@ -39,13 +39,27 @@ const Dashboard = () => {
     };
     fetchUsers();
   }, [navigate]);
-
+  //adding user
   const addUser = async () => {
     if (email && password) {
+      // Fetch the list of regular users
+      const response = await fetch("http://localhost:5000/users"); // Adjust the URL if necessary
+      const regularUsers = await response.json();
+
+      // Check if the user exists in regular users
+      const userExists = regularUsers.some((user) => user.email === email);
+
+      if (!userExists) {
+        alert(
+          "The user you are trying to make an admin is not found in regular users."
+        );
+        return; // Exit the function if the user is not found
+      }
+
       const newUser = { email, password };
 
-      // POST new user to the mock API
-      await fetch("http://localhost:5000/users", {
+      // POST new admin user to the mock API
+      await fetch("http://localhost:5000/admins", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,18 +68,20 @@ const Dashboard = () => {
       });
 
       // Fetch updated user list
-      const response = await fetch("http://localhost:5000/users");
-      const updatedUsers = await response.json();
+      const updatedResponse = await fetch("http://localhost:5000/admins");
+      const updatedUsers = await updatedResponse.json();
       setUsers(updatedUsers);
 
+      // Clear input fields
       setEmail("");
       setPassword("");
+    } else {
+      alert("Please fill in both fields.");
     }
   };
-
   const removeUser = async (id) => {
     // DELETE user from the mock API
-    await fetch(`http://localhost:5000/users/${id}`, {
+    await fetch(`http://localhost:5000/admins/${id}`, {
       method: "DELETE",
     });
     setUsers(users.filter((user) => user.id !== id));

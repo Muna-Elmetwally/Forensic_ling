@@ -24,7 +24,6 @@ const universities = [
     website:
       "https://www.hofstra.edu/graduate/programs/liberal-arts-sciences/forensic-linguistics.html",
   },
-  // Add more universities here...
 ];
 
 const UniversityCard = ({ name, info, reason, website }) => {

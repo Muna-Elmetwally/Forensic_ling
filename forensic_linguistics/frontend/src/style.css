@@ -64,8 +64,8 @@ body {
 }
 
 .signup_nav:hover {
-  background-color: #0a4e70; /* Darker gold on hover */
-  color: gold;
+  background-color: #0a4e70;
+  color: gold; /* Darker gold on hover */
 }
 
 .login_nav:hover {
@@ -82,7 +82,7 @@ body {
 }
 
 header {
-  position: relative; /* Required for the pseudo-element */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,7 +99,7 @@ header {
 
 /* Pseudo-element for glossy effect */
 header::before {
-  content: ""; /* Required for pseudo-element */
+  content: "";
   position: absolute; /* Position it over the header */
   border-radius: 5px; /* Add border radius for smooth edges */
   top: 0;
@@ -129,9 +129,9 @@ header:hover {
 
 /* Optional: Add some smooth font styling for a more elegant look */
 header {
-  font-family: "Rajdhani", sans-serif; /* Use the Rajdhani font */
-  font-weight: 800; /* Make font bold */
-  letter-spacing: 1px; /* Add some spacing for elegance */
+  font-family: "Rajdhani", sans-serif; /* Using the Rajdhani font */
+  font-weight: 800; /* Making font bold */
+  letter-spacing: 1px; /* Adding some spacing for elegance */
 }
 
 .nav-list {

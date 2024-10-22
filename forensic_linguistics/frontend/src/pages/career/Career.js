@@ -74,9 +74,9 @@ const Career = () => {
         communication is fair and unbiased.
 
         Forensic linguists also assess how language is used during interrogations, 
-        ensuring that questions aren’t coercive and that witnesses aren’t misled into 
+        ensuring that questions aren't coercive and that witnesses aren't misled into 
         giving inaccurate testimony. By evaluating these language exchanges, they help 
-        ensure justice by highlighting how discourse influences a trial’s proceedings.
+        ensure justice by highlighting how discourse influences a trial's proceedings.
       `,
     },
   ];

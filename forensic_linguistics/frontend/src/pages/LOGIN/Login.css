@@ -22,7 +22,7 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
-  z-index: -1; /* Ensure it stays behind the form */
+  z-index: -1; /* stays behind the form */
 }
 
 /* Register Form Container Styling */
@@ -40,7 +40,7 @@
   width: 100%;
   text-align: center;
   backdrop-filter: blur(10px); /* Apply blur to make the form stand out */
-  z-index: 1; /* Ensure it's above the background and overlay */
+  z-index: 1; /*  it's above the background and overlay */
 }
 
 /* General Input Styling */

@@ -57,10 +57,10 @@
 }
 
 .career-checkbox {
-  display: none; /* Hide the checkbox */
+  display: none; /* Hiding the checkbox */
 }
 
-/* Add an icon for open/close (optional) */
+/* Adding an icon for open/close*/
 .career-title::after {
   content: "";
   position: absolute;

@@ -1,14 +1,18 @@
-.search-bar-container {
+.search-posts-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-color: #f7f7f7;  Base color */
-  height: 35px; /*  the container thinner */
-  padding: 0px;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items horizontally */
+  justify-content: flex-start; /* Align items at the top */
+  height: auto; /* Allow height to be determined by content */
+  padding: 10px; /* Add some padding for spacing */
   border-radius: 0px;
-  margin: 0;
-  border: none;
-  outline: none;
+  margin: 0 auto; /* Center the container horizontally */
+  position: relative; /* Set position for absolute positioning of results */
+}
+
+.search-bar-wrapper {
+  display: flex; /* Use flexbox to align input and button */
+  align-items: center; /* Center vertically */
 }
 
 .search-input {
@@ -18,16 +22,39 @@
   border-radius: 5px;
   font-size: 12px; /* Smaller font size */
   box-shadow: 0 2px 8px rgba(126, 193, 225, 0.3); /* Soft shadow for depth */
+  margin-right: 5px; /* Space between input and button */
 }
 
+.results-container {
+  position: absolute; /* Position absolute to overlay results */
+  top: 60px; /* Adjust based on input height */
+  left: 50%; /* Center results container horizontally */
+  transform: translateX(-50%); /* Shift left by half the width for centering */
+  z-index: 1000; /* Ensure results appear above other elements */
+  background-color: white; /* Background color for results */
+  border: 1px solid #ccc; /* Border around results */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-height: 300px; /* Limit height */
+  overflow-y: auto; /* Scroll if too many results */
+  width: 500px; /* Make the results container the same width as the input */
+}
+
+.result-item {
+  padding: 10px; /* Space inside each result item */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.result-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
 .search-button {
-  padding: 5px 10px; /* Smaller padding for compact look */
+  padding: 5px 10px;
   background-color: #0a4e70;
   color: #f7f7f7;
   font-size: 13px;
-  margin-left: 5px; /* Less margin for compact spacing */
+  margin-left: 5px;
   border-radius: 5px;
-  cursor: pointer;
   width: 100px;
 }
 .search-button:hover {

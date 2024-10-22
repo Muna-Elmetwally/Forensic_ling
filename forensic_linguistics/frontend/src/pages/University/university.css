@@ -1,18 +1,17 @@
-/* General page styling */
 .university-list {
   text-align: center;
   font-family: "Arial", sans-serif;
   background-color: #eef2f3; /* Soft light background */
-  padding: 50px 30px; /* Increased padding for more space */
+  padding: 50px 30px; /* Increasing padding for more space */
   border-radius: 12px; /* Slightly more rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /*  shadow for depth */
 }
 
 /* Title Styling */
 .university-list h1 {
   font-size: 3rem; /* Larger title */
   color: #333; /* Darker text for contrast */
-  margin-bottom: 30px; /* Reduced margin for tighter layout */
+  margin-bottom: 30px; /* Reducing margin for tighter layout */
   font-weight: 700; /* Bolder title */
   letter-spacing: 1px; /* Slight letter spacing */
   text-transform: uppercase; /* Uppercase for impact */
@@ -25,40 +24,39 @@
   display: block;
   width: 150px;
   height: 4px;
-  background: #0073e6; /* Accent color */
+  background: #0073e6;
   margin: 10px auto 0;
   transition: width 0.3s ease-in-out;
 }
 
 /* Hover effect for title */
 .university-list h1:hover::after {
-  width: 180px; /* Increased width on hover */
+  width: 180px; /* Increasing width on hover */
 }
 
 /* University Card Styling */
 .university-card {
   background: white;
-  padding: 25px; /* Increased padding for spacious feel */
+  padding: 25px; /* Increasing padding for spacious feel */
   border-radius: 15px; /* More rounded corners */
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15); /* Enhancing shadow */
   transition: transform 0.3s, box-shadow 0.3s;
   margin: 15px; /* More spacing between cards */
   position: relative; /* For pseudo-elements */
   overflow: hidden; /* Keeps child elements within bounds */
-  /*  animation: fadeIn 0.6s ease; Animation for card entry */
 }
 
 /* Text inside university card */
 .university-card p {
   margin-top: 20px; /* More space below paragraphs */
   color: #555; /* Softer text color for description */
-  line-height: 1.5; /* Increased line height for readability */
+  line-height: 1.5; /* Increasing line height for readability */
   text-align: left; /* Align text to the left */
 }
 
 /* University Title Styling */
 .university-title {
-  font-size: 1.6rem; /* Increased font size for titles */
+  font-size: 1.6rem; /* Increasing font size for titles */
   color: #0073e6; /* Primary color */
   cursor: pointer;
   transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -87,9 +85,9 @@
 /* Know More Button */
 .know-more-button {
   background-color: #0073e6; /* Primary button color */
-  color: white; /* White text for contrast */
+  color: white;
   border: none;
-  padding: 14px 28px; /* Increased padding for size */
+  padding: 14px 28px; /* Increasing padding for size */
   font-size: 1.1rem; /* Slightly larger font size */
   border-radius: 8px; /*  rounded corners */
   cursor: pointer;
@@ -120,7 +118,7 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .university-card {
-    margin: 10px; /* Reduced margin for smaller screens */
+    margin: 10px; /* Reducing margin for smaller screens */
   }
 
   .university-list h1 {
@@ -128,7 +126,7 @@
   }
 
   .university-title {
-    font-size: 1.4rem; /* Adjusted university title */
+    font-size: 1.4rem; /* Adjusting university title */
   }
 
   .know-more-button {

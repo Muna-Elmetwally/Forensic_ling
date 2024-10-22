@@ -8,16 +8,16 @@
 /* Main content area */
 .legal main {
   flex: 1;
-  padding: 3rem 4rem; /* Increased padding for more spacing */
+  padding: 3rem 4rem; /* Increasing padding for more spacing */
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Increased gap between elements */
+  gap: 2rem; /* Increasing gap between elements */
 }
 
 /* Card styling */
 .legal .card {
   background: white;
-  padding: 2rem; /* Increased padding for better content spacing */
+  padding: 2rem; /* Increasing padding for better content spacing */
   border-radius: 12px; /* Slightly more rounded corners */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -35,7 +35,7 @@
 
 .legal .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Increased shadow on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Increasing shadow on hover */
 }
 
 /* Heading styling */
@@ -43,14 +43,14 @@
   color: #007bff; /* Blue color for headings */
   display: flex;
   align-items: center;
-  font-size: 2rem; /* Increased font size for better visibility */
+  font-size: 2rem; /* Increasing font size for better visibility */
   margin-bottom: 1.5rem;
   font-weight: 600; /* Medium weight for emphasis */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .legal h2 svg {
-  margin-right: 0.7rem; /* Increased space between the icon and text */
+  margin-right: 0.7rem; /* Increasing space between the icon and text */
 }
 
 /* Footer styling */
@@ -58,7 +58,7 @@
   background-color: black;
   color: white;
   text-align: center;
-  padding: 1.5rem; /* Increased padding for better spacing */
+  padding: 1.5rem; /* Increasing padding for better spacing */
   position: relative;
   bottom: 0;
   width: 100%;
@@ -67,7 +67,7 @@
 
 .legal footer p {
   margin: 0;
-  font-size: 1rem; /* Adjusted font size for readability */
+  font-size: 1rem; /* Adjusting font size for readability */
 }
 
 /* Media Queries for Responsive Design */
@@ -77,7 +77,7 @@
   }
 
   .legal .card {
-    padding: 1.5rem; /* Adjusted padding for smaller screens */
+    padding: 1.5rem; /* Adjusting padding for smaller screens */
   }
 
   .legal h2 {

@@ -9,7 +9,7 @@
   background-color: #2d333a;
   padding: 20px;
   color: #fff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
 }
 
 .sidebar h2 {
@@ -65,7 +65,7 @@
   background-color: #28a745;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* Added transform for button animation */
+  transition: background-color 0.3s, transform 0.2s; /* Adding transform for button animation */
 }
 
 .top-bar button:hover {
@@ -100,7 +100,7 @@
   background-color: #28a745;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* Added transform for button animation */
+  transition: background-color 0.3s, transform 0.2s; /* Addingtransform for button animation */
 }
 
 .user-form button:hover {
@@ -113,7 +113,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow to the table */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adding shadow to the table */
 }
 
 .user-table th,
@@ -147,7 +147,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* Added transform for button animation */
+  transition: background-color 0.3s, transform 0.2s; /* Adding transform for button animation */
 }
 
 .action-button:hover {

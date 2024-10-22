@@ -1,24 +1,22 @@
 {
   "users": [
     {
-      "id": "f651",
+      "id": "9b4d",
+      "first_name": "muna",
+      "last_name": "ahmed",
+      "username": "muna elmetwally",
       "email": "moneyahmed222@gmail.com",
-      "password": "123654789"
-    },
-    {
-      "id": "3800",
-      "email": "moneyahmed22@gmail.com",
-      "password": "123456789"
+      "password": "123456789",
+      "phone": "123",
+      "country": "jjjjjjjjjj",
+      "career": "hhhhhhhhhhhhhh"
     }
   ],
-  "search": [
+  "admins": [
     {
-      "id": "1",
-      "name": "Forensic Linguistics Overview"
-    },
-    {
-      "id": "2",
-      "name": "Phonetics and Linguistics"
+      "id": "9b4d",
+      "email": "moneyahmed222@gmail.com",
+      "password": "123456789"
     }
   ],
   "posts": [

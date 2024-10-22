@@ -8,7 +8,7 @@ export default function Posts() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/posts") // Adjust path as necessary
+      .get("http://localhost:5000/posts")
       .then((response) => {
         setPosts(response.data);
       })

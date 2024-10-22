@@ -38,7 +38,7 @@ export default function PostDetails() {
           that have been identified are discussed, dividing them into two
           general categories which we here introduce: language as revealer and
           language as concealer. We will argue that linguistic analysis for DD
-          should be conducted relative to the subject’s individual linguistic
+          should be conducted relative to the subject's individual linguistic
           patterns of behaviour, not on absolutes related to broad
           generalisations about what is supposedly normal or unmarked in the
           population at large. We will also briefly discuss some structured
@@ -55,7 +55,7 @@ export default function PostDetails() {
           nonexpert lies in the prospect that there may exist proven techniques
           to spot when someone is being deceptive.4 Language can be seen on one
           level as an aspect of human behaviour.5 In the same way that a
-          person’s body language may reveal their innermost thoughts, the words
+          person's body language may reveal their innermost thoughts, the words
           that someone uses (or avoids), how they respond (or fail to respond)
           to certain linguistic prompts, and the way that they structure their
           discourse (the weight they give to certain aspects, as well as those
