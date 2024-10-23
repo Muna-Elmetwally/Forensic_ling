@@ -13,8 +13,8 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle"> Events</span>
         <img
-          src="https://scontent.faly1-2.fna.fbcdn.net/v/t39.30808-6/441501222_877382361099251_2635033410179027257_n.jpg?stp=dst-jpg_s720x720&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEOeyQUPyWpxgV3eY1aqbCuLz1XMh1IbPUvPVcyHUhs9VU0zoalxMJs1y3PZTq60l5SEwkphneX7dXO25msVZvF&_nc_ohc=z7ZMorFAvX4Q7kNvgFd4F9Z&_nc_zt=23&_nc_ht=scontent.faly1-2.fna&_nc_gid=Ao00Z3_Koj1F6khZvlHFCJe&oh=00_AYDtJWcGnqsqZa8JP-ptyw4wUS1MItXmh7YQqImxJoC6NA&oe=6717A4DE"
-          alt=""
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZwm_k6LR5bRe6jwG716RmEKR_tEFAZEgXMA&s"
+          alt="upcoming events"
         />
         <p>
           Don't miss this event, we will discuss different topics about
